@@ -1,0 +1,102 @@
+<div class="sidebar">
+    <div class="sidebar-box">
+        <!-- 上面盒子 -->
+        <div class="box-one">
+            <!-- 须知部分 -->
+            <div class="sidecarts-explain">
+                <a href="" target="_blank">选购境外商品须知</a>
+            </div>
+            <!-- 账户、收藏、浏览记录、联系客服、二维码  .. 有共同延伸a  cont类名 各自_cont-->
+            <!-- 购物车、浏览记录....共同展开div    类名expend_page   各自_expend-->
+
+            <!-- 我的账户 -->
+            <div class="my_account" >
+                <a class="sidebar-link" href="/account"><i class="iconfont">&#xe654;</i></a>
+                <!-- 默认不可见 -->
+                <a href="/account" class="cont my_cont" style="right: 70px; opacity: 0; display: none;" id="mysasa">
+                    我的账户
+                    <div class="arrow_right">◆</div>
+                </a>
+            </div>
+            <!-- 购物车 -->
+            <div class="sidecart">
+                <div class="sidecart-buycart" >
+                    <a href="#"><i class="iconfont">&#xe61a;</i>购物车</a>
+                    <b ><span id='js_cartnum'>0</span></b>
+                </div>
+                <!-- 默认是隐藏 -->
+                <div class="expend_page sidecart_expend ">
+                    <div class="cart-conttitle">
+                        购物车 
+                        <button class="btn-close" id="js_closecart" title="关闭" type="button">
+                            <i class="iconfont">&#xe60d;</i>
+                        </button>
+                    </div>
+                      <!-- 购物车内的东西 -->
+                    <div  class="cartdate"></div>
+                </div>
+            </div>
+            <!-- 我的收藏 -->
+            <div class="my_collect" >
+                <a class="sidebar-link" href="/html/favorite-item">
+                    <i class="iconfont">&#xe66b;</i>
+                </a>
+                <!-- 默认不可见 -->
+                <a href="/html/favorite-item" class="cont my_collect_cont" style="right:70px; opacity:0;display: none;">
+                  我的收藏
+                    <div class="arrow_right">◆</div>
+                </a>
+            </div>
+            <!-- 浏览记录 -->
+            <div class="sidehistory" >
+                <a class="sidebar-link" href="javascript:;" >
+                    <i class="iconfont">&#xe659;</i>
+                </a>
+                <!-- 默认不可见 -->
+                <a  href="" class="cont history_cont" style="right:70px; opacity:0;display: none;" id="mysidehistory">
+                      浏览记录
+                    <div class="arrow_right">◆</div>
+                </a>
+                <!-- 默认不可见 -->
+                <div class="expend_page history_expend"  >
+                    <div class="cart-conttitle">
+                        <button class="btn-close" title="关闭" type="button" id="js_closehistory">
+                            <i class="iconfont">&#xe60d;</i>
+                        </button>
+                          最近查看
+                    </div>
+                    <p id='js_hisnum'></p>
+                    <div class="sidehistory_contant"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 下面盒子 -->
+        <div class="box-two">
+            <!-- 联系客服 -->
+            <div class="contact_service">
+                <a class="sidebar-link" href="#"><i class="tmp-livechat-icon"></i>
+                </a>
+                    <!-- 默认不可见 -->
+                <a href="#" class="cont service_cont" style="right:70px; opacity:0;display: none;" id="mydis">
+                    线上客服
+                    <div class="arrow_right">◆</div>
+                </a>
+            </div>
+            <!-- 二维码 -->
+            <div class="QRcode">
+                <a href="#"><i class="iconfont">&#xe64e;</i></a>
+                <!-- 默认不可见 -->
+                <div class="cont QRcode_cont" style="right:120px; opacity:0;display: none;margin-top: -50px;" id="mysidecode">
+                    <img src="http://cn03.alicdn.sasa.com/public/images/dd/0c/88/dcb98cec3f24117a4f2c7f9bebf2914b353b03c9.jpg?1431612793#h" width="140px" height="140px"/>
+                    <div class="arrow_right" style="right: -58px;z-index:-1;margin-top: 50px;color:#fff;">◆</div>
+                </div>
+            </div>
+            <!-- 返回顶部 -->
+            <div class="sideup" id='goTopBtn' style="visibility:hidden">
+                <div class="sideup-text">
+                    <a href="#"><i class="iconfont ">&#xe63a;</i>TOP</a>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>

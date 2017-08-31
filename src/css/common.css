@@ -1,0 +1,32 @@
+/* 
+* @Author: Marte
+* @Date:   2017-08-31 19:40:04
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-31 19:40:31
+*/
+body, body * {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    -o-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+
+label, input, select, textarea {
+    font-size: 13px;
+    font-family: "Microsoft Yahei", "Helvetica Neue", " Helvetica", "Arial", sans-serif;
+    font-weight:300;
+    line-height:1.5;
+    letter-spacing:.025em;
+}
+
+img {
+    border: 0;
+}

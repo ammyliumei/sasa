@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="header_box">
+        <!-- 上部导航条 -->
+        <div class="topbar">
+          <div class="page_top">
+          <!-- 登陆注册模块 -->
+            <div class="login-bar">
+                <!-- 未登录前显示可见，登陆后显示不见 -->
+                <span id="loginBar_right" >
+                    <span>
+                       欢迎光临莎莎网！
+                    </span>
+                    <a href="/html/login" style="margin-left:10px;">登录</a>
+                    <span >或</span>
+                    <a href="/html/register">免费注册</a>
+                </span>
+                <!-- 默认显示不见，登陆了显示可见 -->
+                <span id="memberBar_right" style="display:none">
+                    <span>
+                        您好！<span id="uname"></span>
+                    </span>
+                    <span class="syew" style="display:none;"><i class="iconfont">&#xe611;</i>VIP </span>
+                    <span class="point" style="color:#cb9966;"><b>0</b> 积分</span>
+                    <a href="/passport-logout.html">退出</a>
+                </span>
+            </div>
+            <!-- 用户详情信息列表 -->
+            <div class="member-link">
+
+              <ul>
+                <!-- 我的账户 -->
+                <li class="noline">  
+                  <div class="member-linktext" id="mem_h4">
+                    <a rel="nofollow" href="/account/login">
+                      <i class="iconfont">&#xe654;</i>我的账户
+                      <i class="iconfont ">&#xe608;</i>
+                    </a>
+                  </div>
+                  <!-- 默认为不见 -->
+                  <dl id="mem_dl">
+                    <dd><a href="/account/login" >我的订单</a></dd>
+                    <dd><a href="/account/login" >我的积分</a></dd>
+                    <dd><a href="/account/login">我的优惠券</a></dd>
+                    <dd><a href="/account/login">我的收藏</a></dd>
+                    <dd><a href="/account/login">我的评价</a></dd>
+                  </dl>
+                </li>
+                <!-- 购物车 -->
+                <li class="noline">
+                  <div id="minicart" class="member-linktext">
+                    <div class="js_minicart-title tc">
+                      <a href="/basket"><i class="iconfont">&#xe61a;</i>我的购物车</a>
+                    </div>
+                    <div class="MiniCarDetail minicart-cont-rs">
+                      <img class="loading" src="/themes/default/images/loading.gif"  height="32" width="32"/>
+                    </div>
+                  </div>
+                </li>
+                <!-- 收藏 -->
+                <li class="noline">
+                  <div class="member-linktext">
+                    <a href="/account/login" rel="nofollow"><i class="iconfont">&#xe66b;</i>我的收藏</a>
+                  </div>  
+                </li>
+                <!-- 信箱 -->
+                <li class="noline">
+                  <div class="member-linktext"  id="index_mymessage">
+                    <a rel="nofollow" href="/account/inbox">我的站內信</a>
+                  </div>
+                </li>
+                <!-- 积分中心 -->
+                <li class="noline">
+                  <div class="member-linktext">
+                    <a href="http://www.sasa.com/index.php/gift-lists.html" type="url" target="_blank" rel="nofollow">积分中心</a>
+                  </div>
+                </li>
+                <!-- Global site -->
+                <li class="noline">
+                  <div class="member-linktext">
+                    <a href="http://web1.sasa.com/SasaWeb/splash.jsp?cm_re=cn_top_globalsite" type="url" target="_blank" rel="nofollow">Global site</a>
+                  </div>
+                </li>
+                <!-- 关注 -->
+                <li class="noline">
+                  <div class="member_attention_2" id="us_h4_545" onmouseleave="hideAllQrCode();">
+                    <a  href="#">关注我们 </a>
+                    <a  class="member_attention"  href="http://www.weibo.com/sasahongkong" target="_blank" >
+                      <img src="//www.sasa.com/public/images/61/5d/eb/c259d12fd27e021fbd436fbb75b64c5446e333b4.png?1474448265#w"  height="15" width="17">
+                    </a>
+                    <a  class="member_attention"  href="https://wx.qq.com/" target="_blank" >
+                      <img src="//www.sasa.com/public/images/14/7f/bb/8d854c3356e3bc7f94132006d3c20886195c5166.png?1474448284#w"  height="14" width="17">
+                    </a>
+                    <div class="member_attention_2_qr" >
+                      <img src="//www.sasa.com/public/images/7d/36/90/7191af464a49d84fa95c39361cfdd5ef993347fd.jpg?1474448276#h"  width="100px" height="100px">
+                    </div>
+                    <div class="member_attention_2_qr" >
+                      <img src="//www.sasa.com/public/images/6f/50/f1/d9543ebd87df62d78670356c875833c77b4e4a41.jpg?1474448290#h"   width="100px" height="100px">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 导航条 -->
+        <div class="header-main">
+          <div class="page-rs">
+            <div class="sasalogo">
+                <!-- sasa的logo -->
+                <div style="float: left;">    
+                    <a   href="http://www.sasa.com/index.html"  target="_blank" >
+                      <img src='https://www.sasa.com/public/images/81/a8/e0/0e937ac6e954f773488d653491492d57f5cb95b8.png?1474361298#w' alt="欢迎光临莎莎网" width='170' height='42' />
+                    </a>
+                </div>
+            </div>
+            <!-- 搜索部分 -->
+            <div class="search clearfix">
+                <!-- 搜索表单 -->
+                <form action="/search-result.html"  class="SearchBar" >
+                    <!-- 搜索框 -->
+                    <div class="search-input">
+                        <input type="text" name="search_keywords" placeholder="雅诗兰黛" autocompleter="associate_autocomplete_goods:name,goods_id" ac_options="{}" class="key" value="" autocomplete="off"/>
+                    </div>
+                    <!-- 搜索按钮 -->
+                    <button type="submit" class="btn btn-search">搜索</button>
+                </form>
+                <!-- 热门搜索 -->
+                <div class="hot-keywords">
+                     <a href="./search-精华.html">精华</a>
+                     <a href="./search-保湿.html">保湿</a>
+                     <a href="./search-面霜.html">面霜</a>
+                     <a href="./search-眼霜.html">眼霜</a>
+                     <a href="./search-资生堂.html">资生堂</a>
+                     <a href="./search-补水.html">补水</a>
+                     <a href="./search-瑞士葆丽美.html">瑞士葆丽美</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
