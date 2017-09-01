@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/*枚红色*/
+/*字体深灰色*/
+/*背景浅灰色*/
+/*公告背景中等灰色*/
+/*white*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*欢迎条*/
+.topbar {
+  height: 32px;
+  line-height: 32px;
+  background-color: #f2f2f2;
+  font-size: 12px;
+  color: #6c6c6c;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.topbar a {
+  color: #6c6c6c;
+}
+
+.topbar .login-bar {
+  float: left;
+}
+
+.topbar .login-bar a {
+  color: #ec3e7d;
+  text-decoration: underline;
+}
+
+.topbar .member-link {
+  float: right;
+  _display: inline;
+  text-align: right;
+}
+
+.topbar .member-link ul li {
+  float: left;
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  z-index: 305;
+  /*关注我们*/
+}
+
+.topbar .member-link ul li:hover {
+  background: #fff;
+}
+
+.topbar .member-link ul li .member-linktext a {
+  display: block;
+  font-weight: normal;
+  padding: 0 12px;
+}
+
+.topbar .member-link ul li .member-linktext .minicart-cont {
+  width: 300px;
+  overflow: hidden;
+  visibility: hidden;
+  background-color: white;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.topbar .member-link ul li .member_attention_2 {
+  text-align: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+}
+
+.topbar .member-link ul li .member_attention_2 .member_attention .member_attention_content {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  left: 0;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.topbar .member-link ul li .member_attention_2 .member_attention:hover .member_attention_content {
+  display: block;
+}
+
+/*头部logo搜索区域*/
+.header-main {
+  padding-top: 20px;
+}
+
+.header-main .container {
+  text-align: center;
+  position: relative;
+}
+
+.header-main .container .sasalogo {
+  height: 45px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.header-main .container .search {
+  display: inline-block;
+}
+
+.header-main .container .search .search-input {
+  background-color: #ec3e7d;
+  width: 346px;
+  height: 36px;
+  float: left;
+  _display: inline;
+  position: relative;
+}
+
+.header-main .container .search .search-input .key {
+  outline: none;
+  border: none;
+  width: 330px;
+  height: 24px;
+  line-height: 24px;
+  padding: 3px 5px;
+  font-size: 14px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+
+.header-main .container .search .btn-search {
+  border: none;
+  color: white;
+  text-align: center;
+  background-color: #ec3e7d;
+  width: 90px;
+  height: 36px;
+  line-height: 36px;
+  float: left;
+  _display: inline;
+  cursor: pointer;
+  text-shadow: none;
+  padding: 0;
+  outline: none;
+}
+
+.header-main .container .search .hot-keywords {
+  width: 500px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  clear: both;
+  font-size: 12px;
+  text-align: left;
+}
+
+.header-main .container .search .hot-keywords a {
+  color: #999;
+  border-left: 1px solid #999;
+  line-height: 14px;
+  height: 14px;
+  display: inline-block;
+  padding: 0 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+  -webkit-transition: color .4s linear 0s;
+  -moz-transition: color .4s linear 0s;
+  -ms-transition: color .4s linear 0s;
+  transition: color .4s linear 0s;
+}
+
+/*公告部分*/
+/*sasa的承诺*/
+.sasa_promise_wrapper {
+  border-top: 1px solid #ddd;
+  background: white;
+}
+
+.sasa_promise_wrapper .sasa_promise {
+  font-size: 12px;
+  width: 1200px;
+  height: 126px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.sasa_promise_wrapper .sasa_promise .sasa_promise_item {
+  height: 100%;
+  float: left;
+  margin-right: 80px;
+  overflow: hidden;
+}
+
+.sasa_promise_wrapper .sasa_promise .sasa_promise_item .sasa_promise_icon {
+  float: left;
+  margin-top: 42px;
+  height: 32px;
+  width: 32px;
+  color: #fff;
+  background-image: url(../images/promise_icon.png);
+  background-repeat: no-repeat;
+}
+
+.sasa_promise_wrapper .sasa_promise .sasa_promise_item .sasa_promise_content {
+  margin-left: 14px;
+  float: left;
+  height: 50px;
+  overflow: hidden;
+  margin-top: 38px;
+}
+
+.sasa_promise_wrapper .sasa_promise .sasa_promise_item .sasa_promise_content .sasa_promise_title {
+  font-size: 18px;
+  color: #222;
+  width: 100%;
+  height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sasa_promise_wrapper .sasa_promise .sasa_promise_item .sasa_promise_content .sasa_promise_subtit {
+  font-size: 13px;
+  color: #999999;
+  margin-top: 4px;
+  width: 100%;
+  height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*footer*/
+.buttom_box {
+  overflow: hidden;
+}
+
+.buttom_box .footer_left {
+  width: 800px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.buttom_box .footer_left li {
+  width: 90px;
+  margin-right: 60px;
+  float: left;
+}
+
+.buttom_box .footer_left li h6 {
+  color: #222;
+  font-size: 14px;
+}
+
+.buttom_box .footer_left li a {
+  display: inline-block;
+  width: 90px;
+  color: #999;
+  font-size: 12px;
+}
+
+.buttom_box .footer_right {
+  float: right;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.buttom_box .footer_right .btom-code {
+  width: 128px;
+  max-height: 178px;
+  float: right;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buttom_box .footer_right .btom-code .btom-code img {
+  width: 128px;
+}
+
+.buttom_box .footer_right .btom-code .footer_qrcode_name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #111111;
+}
+
+.buttom_box .footer_right .btom-code .footer_qrcode_desc {
+  font-size: 12px;
+  font-weight: bold;
+  color: #111111;
+}
+
+.buttom_box .footer_right .btom-code2 {
+  margin-right: 40px;
+}
+
+.buttom_box img {
+  margin-bottom: 20px;
+}
+
+/*底部黑色区域*/
+.footer_link_2 {
+  background-color: #000;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  font-size: 12px;
+}
+
+.footer_link_2 a {
+  display: inline-block;
+  padding: 1px 5px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.footer_link_2 .footer_link_2_copyright {
+  padding-top: 14px;
+  line-height: 12px;
+  color: #fff;
+}
+
+/*sidebar*/
+.siderbar .sidebar-box {
+  position: fixed;
+  right: 1px;
+  top: 0;
+  z-index: 528;
+  height: 100%;
+  width: 38px;
+  background: #4c4c4c;
+  text-align: center;
+}
+
+.siderbar .sidebar-box .expend_page, .siderbar .sidebar-box cont {
+  display: none;
+}
+
+.siderbar .sidebar-box .side_item {
+  position: relative;
+  left: 0;
+  width: 38px;
+  line-height: 38px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 9;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.siderbar .sidebar-box .side_item:hover {
+  background: #ec3e7d;
+}
+
+.siderbar .sidebar-box .side_item a {
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  width: 20px;
+  margin: 0 auto;
+}
+
+.siderbar .sidebar-box .box-one {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  margin-top: -190px;
+  z-index: 2;
+}
+
+.siderbar .sidebar-box .box-one .sidecarts-explain {
+  margin: 0 auto;
+  font-weight: normal;
+  line-height: 15px;
+  padding-bottom: 10px;
+}
+
+.siderbar .sidebar-box .box-one .sidecart {
+  line-height: 15px;
+  border-top: 1px solid #666;
+  padding: 25px 0;
+  border-bottom: 1px solid #666;
+}
+
+.siderbar .sidebar-box .box-one .sidecart a {
+  margin-bottom: 10px;
+}
+
+.siderbar .sidebar-box .box-one .sidecart #js_cartnum {
+  color: #fff;
+  font-size: 9px;
+  display: inline-block;
+  background-color: #ec3e7d;
+  line-height: 20px;
+  width: 20px;
+  margin: 0 3px;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.siderbar .sidebar-box .box-two {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}

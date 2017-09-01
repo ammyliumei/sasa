@@ -1,0 +1,93 @@
+@import "var";
+@import "common";
+@import "load";
+
+.sasa_broadcast_outer_wrapper{
+	background-color:$BackgroundMiddleGrey;
+	overflow: hidden;
+	.sasa_broadcast {
+	    font-size: 12px;
+		.sasa_broadcast_word_icon {
+		    color: #fa3778;
+		    font-weight: 700;
+		    line-height: 28px;
+		    text-align: right;
+		    height: 28px;
+		    line-height: 28px;
+		    float: left;
+		}
+		.sasa_broadcast_content {
+		    width: 270px;
+		    height: 28px;
+		    overflow: hidden;
+		    float: left;
+		    margin-left: 20px;
+			.sasa_broadcast_content_inner {
+			    width: 100%;
+			    height: 168px;
+				.sasa_broadcast_adv {
+				    width: 100%;
+				    height: 28px;
+				    line-height: 28px;
+					a {
+					    text-decoration: none;
+					    color: $greyColor;
+					    display: inline-block;
+					    line-height: 28px;
+					}
+				}
+			}
+		}
+	}
+	.sasa_broadcast_more {
+	    display: block;
+	    float: left;
+	    height: 28px;
+	    line-height: 28px;
+	}
+}
+/*中部承诺*/
+.sasa_promise_center{
+		.sasa_promise_wrapper{
+			background: $mainBackgroundGrey ;
+			border: 0;
+		}
+		
+	}
+/*主页内容*/
+#main_content{
+	height: 300px;
+	background: $mainBackgroundGrey ;
+	position:relative;
+	.floor_location{
+		position: absolute;
+	    left: 36.5px;
+	    top: 40px;
+	    z-index: 10;
+	    display: block;
+	    .flooricon {
+	    	li {
+			    padding: 5px;
+			    background: $White;
+			    font-size: 11px;
+			    text-align: center;
+			    margin-bottom: 1px;
+			    &:hover{
+			    	background:$mainColor;
+    				color: #fff;
+    			}
+    			a{
+    				color: #3e3e3e;
+	    			i {
+					    font-size: 25px;
+					    display: block;
+					    margin: 0 auto;
+					}
+				}
+    			
+			}
+	    }
+	    
+	}
+
+}

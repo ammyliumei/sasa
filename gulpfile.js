@@ -12,7 +12,7 @@ gulp.task('compileSass',function(){
     // return的作用是启动链式调用
         // return指示任务是异步的。gulp.src()返回一个流，所以它是异步的。
         // 没有它，任务系统将不知道什么时候完成。
-    setInterval(function(){
+    setTimeout(function(){
          return gulp.src('./src/sass/*.scss')
         // 编译
         .pipe(
@@ -41,8 +41,8 @@ gulp.task('server',function(){
             server:'./src/',
              //代理服务器(静态服务器无法监听php数据)
             // proxy:'http://localhost:10000' ,
-            port:10010,
-            files:['./src/**/*.html','./src/css/*.css','./src/scss/*.scss']
+            // port:10010,
+            files:['./src/**/*.html','./src/css/*.css','./src/sass/*.scss']
             })
    
     

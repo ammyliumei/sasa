@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="../css/header.css" />
+    </head>
+    <body>
+    <!-- 头部 -->
+    <div class="header_box">
+        <!-- 上部导航条 -->
+        <div class="topbar">
+          <div class="container">
+          <!-- 登陆注册模块 -->
+            <div class="login-bar">
+                <!-- 未登录前显示可见，登陆后显示不见 -->
+                <span id="loginBar_right" >
+                    <span>
+                       欢迎光临莎莎网！
+                    </span>
+                    <a href="/html/login" style="margin-left:10px;">登录</a>
+                    <span >或</span>
+                    <a href="/html/register">免费注册</a>
+                </span>
+                <!-- 默认显示不见，登陆了显示可见 -->
+                <span id="memberBar_right" style="display:none">
+                    <span>
+                        您好！<span id="uname"></span>
+                    </span>
+                    <span class="syew" style="display:none;"><i class="iconfont">&#xe611;</i>VIP </span>
+                    <span class="point" style="color:#cb9966;"><b>0</b> 积分</span>
+                    <a href="/passport-logout.html">退出</a>
+                </span>
+            </div>
+            <!-- 用户详情信息列表 -->
+            <div class="member-link">
+
+              <ul>
+                <!-- 我的账户 -->
+                <li class="noline">  
+                  <div class="member-linktext>
+                    <a rel="nofollow" href="/account/login">
+                      <i class="iconfont">&#xe654;</i>我的账户
+                      <i class="iconfont ">&#xe608;</i>
+                    </a>
+                  </div>
+                  <!-- 默认为不见 -->
+                  <dl id="mem_dl" style="display:none;">
+                    <dd><a href="/account/login" >我的订单</a></dd>
+                    <dd><a href="/account/login" >我的积分</a></dd>
+                    <dd><a href="/account/login">我的优惠券</a></dd>
+                    <dd><a href="/account/login">我的收藏</a></dd>
+                    <dd><a href="/account/login">我的评价</a></dd>
+                  </dl>
+                </li>
+                <!-- 购物车 -->
+                <li class="noline">
+                  <div class="member-linktext">
+                    <div class="js_minicart-title tc">
+                      <a href="/basket"><i class="iconfont">&#xe61a;</i>我的购物车</a>
+                    </div>
+                    <!-- 默认不可见 -->
+                    <div class="MiniCarDetail minicart-cont">
+                      <img class="loading" src="#"  height="32" width="32"/>
+                    </div>
+                  </div>
+                </li>
+                <!-- 收藏 -->
+                <li class="noline">
+                  <div class="member-linktext">
+                    <a href="/account/login" rel="nofollow"><i class="iconfont">&#xe66b;</i>我的收藏</a>
+                  </div>  
+                </li>
+                <!-- 信箱 -->
+                <li class="noline">
+                  <div class="member-linktext"  >
+                    <a rel="nofollow" href="/account/inbox">我的站內信</a>
+                  </div>
+                </li>
+                <!-- 积分中心 -->
+                <li class="noline">
+                  <div class="member-linktext">
+                    <a href="http://www.sasa.com/index.php/gift-lists.html" type="url" target="_blank" rel="nofollow">积分中心</a>
+                  </div>
+                </li>
+                <!-- Global site -->
+                <li class="noline">
+                  <div class="member-linktext">
+                    <a href="http://web1.sasa.com/SasaWeb/splash.jsp?cm_re=cn_top_globalsite" type="url" target="_blank" rel="nofollow">Global site</a>
+                  </div>
+                </li>
+                <!-- 关注 -->
+                <li class="noline">
+                  <div class="member_attention_2" id="us_h4_545" onmouseleave="hideAllQrCode();">
+                    <a  href="#">关注我们 </a>
+                    <!-- 微博 -->
+                    <a  class="member_attention"  href="http://www.weibo.com/sasahongkong" target="_blank" >
+                      <img src="//www.sasa.com/public/images/61/5d/eb/c259d12fd27e021fbd436fbb75b64c5446e333b4.png?1474448265#w"  height="15" width="17">
+                      <!-- 二维码 -->
+                      <div class="member_attention_content" >
+                        <img src="//www.sasa.com/public/images/7d/36/90/7191af464a49d84fa95c39361cfdd5ef993347fd.jpg?1474448276#h"  width="100px" height="100px">
+                      </div>
+                    </a>
+                    <!-- 微信 -->
+                    <a  class="member_attention"  href="https://wx.qq.com/" target="_blank" >
+                      <img src="//www.sasa.com/public/images/14/7f/bb/8d854c3356e3bc7f94132006d3c20886195c5166.png?1474448284#w"  height="14" width="17">
+                      <!-- 二维码 -->
+                      <div class="member_attention_content" >
+                        <img src="//www.sasa.com/public/images/6f/50/f1/d9543ebd87df62d78670356c875833c77b4e4a41.jpg?1474448290#h"   width="100px" height="100px">
+                      </div>
+                    </a>
+                    <!-- 二维码 -->
+                    
+                    
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 导航条 -->
+        <div class="header-main">
+          <div class="container">
+                <!-- sasa的logo -->
+            <div class="sasalogo" style="float: left;"> 
+                <a   href="http://www.sasa.com/index.html"  target="_blank" >
+                  <img src='https://www.sasa.com/public/images/81/a8/e0/0e937ac6e954f773488d653491492d57f5cb95b8.png?1474361298#w' alt="欢迎光临莎莎网" width='170' height='42' />
+                </a>
+            </div>
+            <!-- 搜索部分 -->
+            <div class="search clearfix">
+                <!-- 搜索表单 -->
+                <form action="/search-result.html"  class="SearchBar" >
+                    <!-- 搜索框 -->
+                    <div class="search-input">
+                        <input type="text" name="search_keywords" placeholder="雅诗兰黛" autocompleter="associate_autocomplete_goods:name,goods_id" ac_options="{}" class="key" value="" autocomplete="off"/>
+                    </div>
+                    <!-- 搜索按钮 -->
+                    <button type="submit" class="btn btn-search">搜索</button>
+                </form>
+                <!-- 热门搜索 -->
+                <div class="hot-keywords">
+                     <a href="./search-精华.html">精华</a>
+                     <a href="./search-保湿.html">保湿</a>
+                     <a href="./search-面霜.html">面霜</a>
+                     <a href="./search-眼霜.html">眼霜</a>
+                     <a href="./search-资生堂.html">资生堂</a>
+                     <a href="./search-补水.html">补水</a>
+                     <a href="./search-瑞士葆丽美.html">瑞士葆丽美</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 导肮条 -->
+    <div class="nav_category">
+      <div class="container">
+      <!-- 所有种类 -->
+        <div class="all_category">
+          <div class="all_category_head">
+            <i></i>
+            <h3>全部种类</h3>
+          </div>
+          <ul class="all_category_title">
+            <!-- <li>
+              <i></i>
+              <h4></h4>
+              <i></i>
+            </li> -->
+          </ul> 
+        </div>
+        <!-- 导航条部分 -->
+        <ul>
+          <!-- <li >
+          </li> -->   
+        </ul>     
+      </div>
+    </div>
+
+
+
+
+    <!-- 底部 -->
+    <div class="footer_box">
+        <!-- 莎莎的承诺 -->
+        <div class="sasa_promise_wrapper">
+          <div class="container">
+            <div class="sasa_promise">
+                <div class="sasa_promise_item sasa_promise_item_0">
+                    <div class="sasa_promise_icon sasa_promise_icon0">
+                    </div>
+                    <div class="sasa_promise_content">
+                        <p class="sasa_promise_title">满¥168免邮</p>
+                        <p class="sasa_promise_subtit">适用于保税仓商品</p>
+                    </div>
+                </div>
+                <div class="sasa_promise_item sasa_promise_item_1">
+                    <div class="sasa_promise_icon sasa_promise_icon1">
+                    </div>
+                    <div class="sasa_promise_content">
+                        <p class="sasa_promise_title">正品保证</p>
+                        <p class="sasa_promise_subtit">专注美妆护肤39年</p>
+                    </div>
+                </div>
+                <div class="sasa_promise_item sasa_promise_item_2">
+                    <div class="sasa_promise_icon sasa_promise_icon2">
+                    </div>
+                    <div class="sasa_promise_content">
+                        <p class="sasa_promise_title">香港直邮</p>
+                        <p class="sasa_promise_subtit">香港直发 美丽到家</p>
+                    </div>
+                </div>
+                <div class="sasa_promise_item sasa_promise_item_3">
+                    <div class="sasa_promise_icon sasa_promise_icon3">
+                    </div>
+                    <div class="sasa_promise_content">
+                        <p class="sasa_promise_title">30天退换保证</p>
+                        <p class="sasa_promise_subtit">为您提供售后无忧保障</p>
+                    </div>
+                </div>
+                <div class="sasa_promise_item sasa_promise_item_4">
+                    <div class="sasa_promise_icon sasa_promise_icon4">
+                    </div>
+                    <div class="sasa_promise_content">
+                        <p class="sasa_promise_title">香港上市</p>
+                        <p class="sasa_promise_subtit">股票代码: HK00178</p>
+                    </div>
+                </div>
+            </div>
+          </div>  
+        </div>
+          <!-- 左下角盒子 -->
+        <div class="buttom_box">
+
+          <div class="container">
+            <ul class="footer_left clearfix">
+              <li>
+                <h6>新手上路</h6>
+                <a  href="#">购物流程</a>
+                <a  href="#">优惠券说明</a>
+                <a  href="#">常见问题</a>
+                <a  href="#">联络我们</a>
+                <a  href="#">购物流程</a>
+                <a  href="#">常见问题</a>
+              </li>
+              <li>
+                <h6>付款方式</h6>
+                <a href="#">在线支付</a>
+                <a href="#">积分支付</a>
+              </li>
+              <li>
+                <h6>配送方式</h6>
+                <a href="#">配送说明</a>
+                <a href="#">追踪订单</a>
+              </li>
+              <li>
+                <h6>售后服务</h6>
+                <a href="#">正品保证</a>
+                <a href="#">价格承诺</a>
+                <a href="#">30日退换保证</a><br>
+                <a href="#">退款程序</a>
+                <a href="#">更改订单</a>
+              </li>
+              <li>
+                <h6>莎莎会员</h6>
+                <a href="#">积分奖赏</a>
+                <a href="#">vip会员计划</a>
+              </li>
+            </ul>
+            <!--右下角盒子-  --> 
+            <div class="footer_right clearfix">
+              <div class="btom-code">
+                 <div class="footer_qrcode_wrapper">
+                  <div class="footer_qrcode_img">
+                    <img src="https://www.sasa.com/public/images/a8/be/94/92916c648aa5518f6c52210ff2e8418eb3c750a0.jpg?1474362276#h" alt="莎莎网官方微信" height="128" width="128">
+                  </div>
+                  <div class="footer_qrcode_name">
+                      莎莎网官方微信
+                  </div>
+                  <div class="footer_qrcode_desc">
+                    ID:hksasadotcom
+                  </div>
+                </div>
+              </div>
+              <div class="btom-code btom-code2">
+                <div class="footer_qrcode_wrapper">
+                  <div class="footer_qrcode_img">
+                    <img src="https://www.sasa.com/public/images/b9/5f/88/deb092788153cdc8e38fc6089b36561fd55e495d.jpg?1474362257#h" alt="莎莎官方微博" height="128" width="128">
+                  </div>
+                  <div class="footer_qrcode_name">
+                    莎莎网官方微博
+                  </div>
+                  <div class="footer_qrcode_desc">
+                  @莎莎网
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 下方图片 -->
+            <img src="https://www.sasa.com/public/images/76/b5/41/2ba94eca9ab1e31bff8edcc9a4d60e764f051972.jpg?1474362298#w" width="840" height="61">
+          </div>
+        </div>
+            <!-- 黑色底部 -->
+            <div class="footer_link_2" id="footer_link_2_562">
+               <div class="container">
+                  <div class="footer_link_2_linkboard">
+                          <a href="/about" rel="nofollow">关于莎莎</a>
+                          <a class="footer_link_2_sep">|</a>
+                          <a href="/terms" rel="nofollow">使用条款</a>
+                          <a class="footer_link_2_sep">|</a>
+                          <a href="/privacy-policy" rel="nofollow">隐私策略</a>
+                          <a class="footer_link_2_sep">|</a>
+                           <a href="#" rel="nofollow">批发服务</a>
+                          <a class="footer_link_2_sep">|</a>
+                          <a href="/business" rel="nofollow">招商合作</a>
+                          <a class="footer_link_2_sep">|</a>
+                          <a href="/notice/declaration" rel="nofollow">帮助中心</a>
+                          <a class="footer_link_2_sep">|</a>
+                           <a href="/promotion" rel="nofollow">港澳店铺推广</a>
+                          <a class="footer_link_2_sep">|</a>
+                          <a href="/recruit" rel="nofollow">人才招聘</a>
+                          <a class="footer_link_2_sep">|</a>
+                          <a href="/cs" rel="nofollow">联络我们</a>
+                          <a class="footer_link_2_sep">|</a>
+                          <a href="http://web1.sasa.com/SasaWeb/splash.jsp" rel="nofollow">其他送货地区</a>
+                          <a class="footer_link_2_sep">|</a>
+                  </div>
+                  <div class="footer_link_2_copyright">
+                      Copyright 2000-2016 Sa Sa dot Com Limited  版权所有莎莎国际控股有限公司成员
+                  </div>
+                </div> 
+            </div>
+    </div>
+
+
+
+
+
+
+    <!-- 侧边栏 -->
+    <div class="sidebar-box">
+        <!-- 上面盒子 -->
+        <div class="box-one">
+            <!-- 须知部分 -->
+            <div class="sidecarts-explain side_item">
+                <a href="" target="_blank">选购境外商品须知</a>
+            </div>
+            <!-- 账户、收藏、浏览记录、联系客服、二维码  .. 有共同延伸a  cont类名 各自_cont-->
+            <!-- 购物车、浏览记录....共同展开div    类名expend_page   各自_expend-->
+
+            <!-- 我的账户 -->
+            <div class="my_account side_item" >
+                <a class="sidebar-link" href="/account"><i class="iconfont">&#xe654;</i></a>
+                <!-- 默认不可见 -->
+                <a href="/account" class="cont my_cont" style="right: 70px; opacity: 0; display: none;" id="mysasa">
+                    我的账户
+                    <div class="arrow_right">◆</div>
+                </a>
+            </div>
+            <!-- 购物车 -->
+            <div class="sidecart side_item">
+                <div class="sidecart-buycart" >
+                    <a href="#"><i class="iconfont">&#xe61a;</i>购物车</a>
+                    <b ><span id='js_cartnum'>0</span></b>
+                </div>
+                <!-- 默认是隐藏 -->
+                <div class="expend_page sidecart_expend ">
+                    <div class="cart-conttitle">
+                        购物车 
+                        <button class="btn-close" id="js_closecart" title="关闭" type="button">
+                            <i class="iconfont">&#xe60d;</i>
+                        </button>
+                    </div>
+                      <!-- 购物车内的东西 -->
+                    <div  class="cartdate"></div>
+                </div>
+            </div>
+            <!-- 我的收藏 -->
+            <div class="my_collect side_item" >
+                <a class="sidebar-link" href="/html/favorite-item">
+                    <i class="iconfont">&#xe66b;</i>
+                </a>
+                <!-- 默认不可见 -->
+                <a href="/html/favorite-item" class="cont my_collect_cont" style="right:70px; opacity:0;display: none;">
+                  我的收藏
+                    <div class="arrow_right">◆</div>
+                </a>
+            </div>
+            <!-- 浏览记录 -->
+            <div class="sidehistory side_item" >
+                <a class="sidebar-link" href="javascript:;" >
+                    <i class="iconfont">&#xe659;</i>
+                </a>
+                <!-- 默认不可见 -->
+                <a  href="" class="cont history_cont" style="right:70px; opacity:0;display: none;" id="mysidehistory">
+                      浏览记录
+                    <div class="arrow_right">◆</div>
+                </a>
+                <!-- 默认不可见 -->
+                <div class="expend_page history_expend"  >
+                    <div class="cart-conttitle">
+                        <button class="btn-close" title="关闭" type="button" id="js_closehistory">
+                            <i class="iconfont">&#xe60d;</i>
+                        </button>
+                          最近查看
+                    </div>
+                    <p id='js_hisnum'></p>
+                    <div class="sidehistory_contant"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 下面盒子 -->
+        <div class="box-two">
+            <!-- 联系客服 -->
+            <div class="contact_service side_item">
+                <a class="sidebar-link" href="#"><i class="tmp-livechat-icon">&#xe61a;</i>
+                </a>
+                    <!-- 默认不可见 -->
+                <a href="#" class="cont service_cont" style="right:70px; opacity:0;display: none;" id="mydis">
+                    线上客服
+                    <div class="arrow_right">◆</div>
+                </a>
+            </div>
+            <!-- 二维码 -->
+            <div class="QRcode side_item">
+                <a href="#"><i class="iconfont">&#xe64e;</i></a>
+                <!-- 默认不可见 -->
+                <div class="cont QRcode_cont" style="right:120px; opacity:0;display: none;margin-top: -50px;" id="mysidecode">
+                    <img src="http://cn03.alicdn.sasa.com/public/images/dd/0c/88/dcb98cec3f24117a4f2c7f9bebf2914b353b03c9.jpg?1431612793#h" width="140px" height="140px"/>
+                    <div class="arrow_right" style="right: -58px;z-index:-1;margin-top: 50px;color:#fff;">◆</div>
+                </div>
+            </div>
+            <!-- 返回顶部 -->
+            <div class="sideup side_item" id='goTopBtn' style="visibility:hidden">
+                <div class="sideup-text">
+                    <a href="#"><i class="iconfont ">&#xe63a;</i>TOP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
