@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="./iconfont.css">
         <link rel="stylesheet" type="text/css" href="../css/header.css" />
     </head>
     <body>
@@ -38,10 +38,10 @@
               <ul>
                 <!-- 我的账户 -->
                 <li class="noline">  
-                  <div class="member-linktext>
+                  <div class="member-linktext">
                     <a rel="nofollow" href="/account/login">
-                      <i class="iconfont">&#xe654;</i>我的账户
-                      <i class="iconfont ">&#xe608;</i>
+                      <i class="iconfont icon-icon068"></i>我的账户
+                      <i class="iconfont icon-sanjiaoxing-copy1"></i>
                     </a>
                   </div>
                   <!-- 默认为不见 -->
@@ -57,7 +57,7 @@
                 <li class="noline">
                   <div class="member-linktext">
                     <div class="js_minicart-title tc">
-                      <a href="/basket"><i class="iconfont">&#xe61a;</i>我的购物车</a>
+                      <a href="/basket"><i class="iconfont icon-gouwuche"></i>我的购物车</a>
                     </div>
                     <!-- 默认不可见 -->
                     <div class="MiniCarDetail minicart-cont">
@@ -68,7 +68,7 @@
                 <!-- 收藏 -->
                 <li class="noline">
                   <div class="member-linktext">
-                    <a href="/account/login" rel="nofollow"><i class="iconfont">&#xe66b;</i>我的收藏</a>
+                    <a href="/account/login" rel="nofollow"><i class="iconfont icon-xin"></i>我的收藏</a>
                   </div>  
                 </li>
                 <!-- 信箱 -->
@@ -118,7 +118,7 @@
             </div>
           </div>
         </div>
-        <!-- 导航条 -->
+        <!-- logo -->
         <div class="header-main">
           <div class="container">
                 <!-- sasa的logo -->
@@ -158,26 +158,72 @@
 
 
     <!-- 导肮条 -->
-    <div class="nav_category">
-      <div class="container">
+    <div class="nav_category   clearfix" style="height:38px">
+      <div class="container clearfix">
       <!-- 所有种类 -->
-        <div class="all_category">
+        <div class="all_category  clearfix">
           <div class="all_category_head">
             <i></i>
-            <h3>全部种类</h3>
+            <div>全部种类</div>
           </div>
-          <ul class="all_category_title">
-            <!-- <li>
-              <i></i>
-              <h4></h4>
-              <i></i>
-            </li> -->
+          <ul class="all_category_title_box  ">
+            <li class="facial_care">
+              <i class="iconfont beforericon icon-mianmo"></i>
+              <a>面部护肤</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
+            <li class="make_up">
+              <i class="iconfont beforericon icon-caizhuang"></i>
+              <a>彩妆</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
+            <li class="perfume"> 
+              <i class="iconfont beforericon icon-xiangshui"></i>
+              <a>香水</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
+            <li class="healthy_skin">
+              <i class="iconfont beforericon icon-tubiaozhizuomoban"></i>
+              <a>健康美肌</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
+            <li class="slimming">
+              <i class="iconfont beforericon icon-huli"></i>
+              <a>纤体美胸</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
+            <li class="nurse">
+              <i class="iconfont beforericon icon-huli"></i>
+              <a>个人护理</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
+            <li class="man_place">
+              <i class="iconfont beforericon icon-jianshen"></i>
+              <a>男士专区</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
+            <li>
+              <i class="iconfont beforericon icon-naizuiline "></i>
+              <a class="boby_place">孕婴护理</a>
+              <i class="iconfont aftericon icon-dayuhao"></i>
+            </li>
           </ul> 
         </div>
         <!-- 导航条部分 -->
-        <ul>
-          <!-- <li >
-          </li> -->   
+        <ul class="sub_nav">
+          <li class="sub_nav_item"><a href="#">面部护肤</a></li>
+          <li class="sub_nav_sep">/</li>
+          <li class="sub_nav_item"><a href="#">彩妆</a></li>
+          <li class="sub_nav_sep">/</li>
+          <li class="sub_nav_item"><a href="#">限时特卖<i class="iconfont icon-hot"></i></a></li>
+          <li class="sub_nav_sep">/</li>
+          <li class="sub_nav_item"><a href="#">贵宾专享</a></li>
+          <li class="sub_nav_sep">/</li>
+          <li class="sub_nav_item "><a href="#">闪电保税区<i class="iconfont icon-hot"></i></a></li>
+          <li class="sub_nav_sep">/</li>
+          <li class="sub_nav_item"><a href="#">清仓特卖</a></li>
+          <li class="sub_nav_sep">/</li>
+          <li class="sub_nav_item"><a href="#">所有品牌 <i class="iconfont icon-sanjiaoxing-copy1"></i></a></li>
         </ul>     
       </div>
     </div>
@@ -355,7 +401,7 @@
 
             <!-- 我的账户 -->
             <div class="my_account side_item" >
-                <a class="sidebar-link" href="/account"><i class="iconfont">&#xe654;</i></a>
+                <a class="sidebar-link" href="/account"><i class="iconfont  icon-icon068"></i></a>
                 <!-- 默认不可见 -->
                 <a href="/account" class="cont my_cont" style="right: 70px; opacity: 0; display: none;" id="mysasa">
                     我的账户
@@ -365,8 +411,8 @@
             <!-- 购物车 -->
             <div class="sidecart side_item">
                 <div class="sidecart-buycart" >
-                    <a href="#"><i class="iconfont">&#xe61a;</i>购物车</a>
-                    <b ><span id='js_cartnum'>0</span></b>
+                    <a href="#"><i class="iconfont icon-gouwuche"></i>购物车</a>
+                    <span id='js_cartnum'>0</span>
                 </div>
                 <!-- 默认是隐藏 -->
                 <div class="expend_page sidecart_expend ">
@@ -383,7 +429,7 @@
             <!-- 我的收藏 -->
             <div class="my_collect side_item" >
                 <a class="sidebar-link" href="/html/favorite-item">
-                    <i class="iconfont">&#xe66b;</i>
+                    <i class="iconfont icon-xin"></i>
                 </a>
                 <!-- 默认不可见 -->
                 <a href="/html/favorite-item" class="cont my_collect_cont" style="right:70px; opacity:0;display: none;">
@@ -394,7 +440,7 @@
             <!-- 浏览记录 -->
             <div class="sidehistory side_item" >
                 <a class="sidebar-link" href="javascript:;" >
-                    <i class="iconfont">&#xe659;</i>
+                    <i class="iconfont icon-xiaofeijilu-copy"></i>
                 </a>
                 <!-- 默认不可见 -->
                 <a  href="" class="cont history_cont" style="right:70px; opacity:0;display: none;" id="mysidehistory">
@@ -418,7 +464,7 @@
         <div class="box-two">
             <!-- 联系客服 -->
             <div class="contact_service side_item">
-                <a class="sidebar-link" href="#"><i class="tmp-livechat-icon">&#xe61a;</i>
+                <a class="sidebar-link" href="#"><i class="iconfont icon-kefu"></i>
                 </a>
                     <!-- 默认不可见 -->
                 <a href="#" class="cont service_cont" style="right:70px; opacity:0;display: none;" id="mydis">
@@ -428,7 +474,7 @@
             </div>
             <!-- 二维码 -->
             <div class="QRcode side_item">
-                <a href="#"><i class="iconfont">&#xe64e;</i></a>
+                <a href="#"><i class="iconfont icon-erweima"></i></a>
                 <!-- 默认不可见 -->
                 <div class="cont QRcode_cont" style="right:120px; opacity:0;display: none;margin-top: -50px;" id="mysidecode">
                     <img src="http://cn03.alicdn.sasa.com/public/images/dd/0c/88/dcb98cec3f24117a4f2c7f9bebf2914b353b03c9.jpg?1431612793#h" width="140px" height="140px"/>
@@ -438,10 +484,13 @@
             <!-- 返回顶部 -->
             <div class="sideup side_item" id='goTopBtn' style="visibility:hidden">
                 <div class="sideup-text">
-                    <a href="#"><i class="iconfont ">&#xe63a;</i>TOP</a>
+                    <a href="#"><i class="iconfont icon-sanjiaoxing-copy-copy"></i>TOP</a>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./lib/jquery-3.2.1.js"></script>
+    <script src="./lib/jquery-silderPlay.js"></script>
+
   </body>
 </html>

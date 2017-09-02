@@ -41,6 +41,10 @@
 		    		    display: block;
 						font-weight: normal;
     					padding: 0 12px;
+    					i{
+    						color:$mainColor;
+    						font-weight:bolder;
+    					}
 
 			    	}
 			    	 .minicart-cont{
@@ -102,7 +106,6 @@
 		.search{
 			display: inline-block;
 			.search-input{
-
 			    background-color: $mainColor ;
 			    width: 346px;
 			    height: 36px;
@@ -164,9 +167,104 @@
 	
 	}
 }
-/*公告部分*/
 
+/*导航条*/
+.nav_category{
+	.all_category{
+		float:left;
+		height: 36px;
+		color: #fff;
+		position: relative;
+		.all_category_head{
+			font-size: 16px;
+		    position: relative;
+		    width: 190px;
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    padding-left: 50px;
+		    height: 36px;
+		    line-height: 36px;
+		    cursor: auto;
+		    background-color: #333;
+		}
+		ul.all_category_title_box{
+			position: absolute;
+    		top: 36px;
+   			height: 420px;
+   			z-index: 2000;
+   			li{
+   				width: 170px !important;
+			    height: 29px !important;
+			    padding: 11px 0px 11px 20px;
+			    position: relative;
+			    background-color: #fa3778;
+			  	border-bottom:1px dotted #fe7dab;
+			   
+			    &:hover{
+			    	background:$White;
+			    	color:$mainColor;
+			    	a{
+			    		color:$mainColor;
+			    	}
+			    	.aftericon{
+			    		color:$greyColor;
+			    	}
+			    }
+			    .beforericon{
+			    	font-size: 22px;
+			    	margin-right: 10px;
+			    }
+				.aftericon{
+					float:right;
+					line-height: 29px;
+					height: 29px;
+					margin-right: 20px;
+				}
+				a{
+					font-size: 16px;
+					line-height: 30px;
+				}
+   			}
+		}
+    
+	}
+	ul.sub_nav{
+		float: left;
+	    height: 36px;
+	    line-height: 36px;
+	    position: relative;
+	    margin-left: 20px;
+		li{
+			float: left;
+		    display: inline-block;
+		    overflow: hidden;
+		    padding: 0 5px;
+		    text-align: center;
+		    &.sub_nav_item{
+				position: relative;
+				a{
+					color:#111111;
+					font-size: 16px;
+					&:hover{
+			    		color:$mainColor;
+			    	}
+			    	i.icon-hot{
+			    		font-size: 30px;
+						color:$mainColor;
+			    	}
+				}
+		    }
+		    &.sub_nav_sep{
+		    	width: 20px !important;
+			    text-align: center !important;
+			    margin: 0 !important;				    color: #eee !important;
+    			font-weight: 100;
+		    }
+		}
 
+	}
+}
 /*sasa的承诺*/
 .sasa_promise_wrapper {
     border-top: 1px solid #ddd;
@@ -323,6 +421,7 @@
 		    box-sizing: border-box;
 		    &:hover{
 		    	background:#ec3e7d;
+		    	
 		    }
 			a{
 		    	color:$White;
@@ -330,6 +429,10 @@
 	    	    display:block;
 			    width: 20px;
 			    margin: 0 auto;
+			    i.iconfont{
+			    	color: #c69a62;
+    				font-size: 20px;
+			    }
 		    }
 	     }
 	    .box-one {

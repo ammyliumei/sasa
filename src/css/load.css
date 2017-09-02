@@ -57,6 +57,11 @@
   padding: 0 12px;
 }
 
+.topbar .member-link ul li .member-linktext a i {
+  color: #ec3e7d;
+  font-weight: bolder;
+}
+
 .topbar .member-link ul li .member-linktext .minicart-cont {
   width: 300px;
   overflow: hidden;
@@ -177,7 +182,116 @@
   transition: color .4s linear 0s;
 }
 
-/*公告部分*/
+/*导航条*/
+.nav_category .all_category {
+  float: left;
+  height: 36px;
+  color: #fff;
+  position: relative;
+}
+
+.nav_category .all_category .all_category_head {
+  font-size: 16px;
+  position: relative;
+  width: 190px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-left: 50px;
+  height: 36px;
+  line-height: 36px;
+  cursor: auto;
+  background-color: #333;
+}
+
+.nav_category .all_category ul.all_category_title_box {
+  position: absolute;
+  top: 36px;
+  height: 420px;
+  z-index: 2000;
+}
+
+.nav_category .all_category ul.all_category_title_box li {
+  width: 170px !important;
+  height: 29px !important;
+  padding: 11px 0px 11px 20px;
+  position: relative;
+  background-color: #fa3778;
+  border-bottom: 1px dotted #fe7dab;
+}
+
+.nav_category .all_category ul.all_category_title_box li:hover {
+  background: #fff;
+  color: #ec3e7d;
+}
+
+.nav_category .all_category ul.all_category_title_box li:hover a {
+  color: #ec3e7d;
+}
+
+.nav_category .all_category ul.all_category_title_box li:hover .aftericon {
+  color: #999;
+}
+
+.nav_category .all_category ul.all_category_title_box li .beforericon {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.nav_category .all_category ul.all_category_title_box li .aftericon {
+  float: right;
+  line-height: 29px;
+  height: 29px;
+  margin-right: 20px;
+}
+
+.nav_category .all_category ul.all_category_title_box li a {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.nav_category ul.sub_nav {
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav_category ul.sub_nav li {
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.nav_category ul.sub_nav li.sub_nav_item {
+  position: relative;
+}
+
+.nav_category ul.sub_nav li.sub_nav_item a {
+  color: #111111;
+  font-size: 16px;
+}
+
+.nav_category ul.sub_nav li.sub_nav_item a:hover {
+  color: #ec3e7d;
+}
+
+.nav_category ul.sub_nav li.sub_nav_item a i.icon-hot {
+  font-size: 30px;
+  color: #ec3e7d;
+}
+
+.nav_category ul.sub_nav li.sub_nav_sep {
+  width: 20px !important;
+  text-align: center !important;
+  margin: 0 !important;
+  color: #eee !important;
+  font-weight: 100;
+}
+
 /*sasa的承诺*/
 .sasa_promise_wrapper {
   border-top: 1px solid #ddd;
@@ -363,6 +477,11 @@
   display: block;
   width: 20px;
   margin: 0 auto;
+}
+
+.siderbar .sidebar-box .side_item a i.iconfont {
+  color: #c69a62;
+  font-size: 20px;
 }
 
 .siderbar .sidebar-box .box-one {
