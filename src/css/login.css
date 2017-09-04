@@ -1,4 +1,54 @@
 @charset "UTF-8";
+.clearfox::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, fieldset, form, input, select, textarea, button, figure, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, select, textarea {
+  border-width: 1px;
+  border-color: #cccccc;
+  padding: 1px;
+}
+
+input, select, button, textarea {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+address, em, i {
+  font-style: normal;
+}
+
+.fr {
+  float: right;
+}
+
 /*枚红色*/
 /*字体深灰色*/
 /*背景浅灰色*/
@@ -570,4 +620,198 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+}
+
+.login_container {
+  width: 1090px;
+  margin: 0 auto;
+}
+
+.header_mian {
+  background: #fff;
+  position: relative;
+  z-index: 300;
+  height: 95px;
+}
+
+.header_mian .sotelogo {
+  width: 300px;
+  height: 45px;
+  position: absolute;
+  top: 21px;
+  overflow: hidden;
+}
+
+.header_mian .sotelogo a {
+  text-decoration: none;
+  color: #3e3e3e;
+}
+
+.header_mian .sotelogo img {
+  float: left;
+  border: none;
+}
+
+#login_box .login-page-wrap {
+  margin-top: 40px;
+  overflow: hidden;
+  background: url("../images/login.png") no-repeat 0 center;
+}
+
+#login_box .login-page-wrap .loginup-article {
+  width: 420px;
+  margin-right: 68px;
+  box-shadow: 0 0 5px #e1e1e1, 0 0 15px #e1e1e1;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+#login_box .login-page-wrap .loginup-article .login-title {
+  margin-bottom: 10px;
+}
+
+#login_box .login-page-wrap .loginup-article .login-title .login-title-text {
+  font-family: 'Microsoft Yahei';
+  color: #5a5d6c;
+  font-weight: normal;
+  font-size: 21px;
+}
+
+#login_box .login-page-wrap .loginup-article .login-title .login-title-text .descrip {
+  font-size: 12px;
+}
+
+#login_box .login-page-wrap .loginup-article .login-title .login-title-text .descrip a {
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #ec3e7d;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox {
+  margin-top: 40px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox a {
+  margin-left: 3px;
+  margin-right: 3px;
+  text-decoration: none;
+  color: #3e3e3e;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form input {
+  vertical-align: middle;
+  outline: none;
+  line-height: 21px;
+  height: 21px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item {
+  height: 51px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-label {
+  width: 145px;
+  display: none;
+  height: 32px;
+  overflow: hidden;
+  height: 32px;
+  overflow: hidden;
+  text-align: right;
+  float: left;
+  width: 5.2em;
+  line-height: 2.1em;
+  min-height: 1em;
+  font-size: 13px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-label .warn {
+  color: #ef4521;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act {
+  display: block;
+  _display: inline;
+  line-height: 2.5em;
+  position: relative;
+  font-size: 13px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act input[type=checkbox], #login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act input[type=radio] {
+  height: 13px;
+  width: 20px;
+  box-shadow: none;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act label {
+  margin-left: 5px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act .x-input {
+  height: 26px;
+  line-height: 26px;
+  padding: 4px;
+  width: 340px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act .verify-input {
+  width: 120px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act .auto-change-verify-handle {
+  cursor: pointer;
+  width: 80px;
+  height: 36px;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .password-check {
+  width: 22px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 40px;
+  visibility: hidden;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul .action-need-verify a.btn-caution span {
+  border-color: transparent;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul a.auto-change-verify-handle {
+  width: 50px;
+  line-height: 18px;
+  color: #666;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul .btn span {
+  background-color: #ee407f;
+  display: inline-block;
+  height: 100%;
+  line-height: 35px;
+  font-size: inherit;
+  padding-left: 30px;
+  color: #fff;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul .btn span span {
+  border: 0 none;
+  background-color: transparent;
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul .btn-big, #login_box .login-page-wrap .loginup-article .loginupbox form ul .passport-btn .btn-caution {
+  display: block;
+  width: 100%;
+  background: #ec3e7d;
+  line-height: 40px;
+  color: #fff;
+  font-size: 16px;
+  border: 0;
 }

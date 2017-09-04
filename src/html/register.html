@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+<!-- sasa图片 -->
+  <div class="header-main">
+    <div class="register_container">
+      <div class="sotelogo">
+        <a href="../index.html">
+          <img alt="Ecstore-demo" src="../images/sasa_logo.png" border="0">
+        </a>               
+      </div>
+    </div>
+  </div>
+    <!-- 注册模块 -->
+  <div id="register_box">
+    <div class="register_container">
+      <!-- 注册盒子 -->
+      <div class="signin-page-wrap clb" >
+        <div class="signup-article fr">
+          <div id="page_signup" class="signupin-content signup">
+            <!-- 注册标题 -->
+            <div class="sign-title">
+              <div class="sign-title-text">
+                  注册账号
+                <span class="descrip fr">已有莎莎网帐号？
+                  <a href="login.html">立即登录</a>
+                </span>
+              </div>
+            </div>
+            <!-- 注册盒子 -->
+            <div class="signupbox">
+              <form action="/passport-create.html" method="post">
+                <input name="forward" type="hidden" value="">
+                <input name="mini" type="hidden" value="">
+                <ul>
+                <!-- 注册账号 -->
+                  <li class="form-item">
+                    <label for="" class="form-label"><em class="warn">*</em>邮箱/手机：</label>
+                    <span class="form-act">
+                      <input class="x-input action-account-check J_uname" type="text" name="pam_account[register_name]" id="dom_el_aace760" placeholder="请输入邮箱/手机号，最少5个字符" vtype="required" data-caution="请填写邮箱或手机号，最少5个字符">
+                      <span class="validation-messagebox"></span>
+                      </span>
+                  </li>
+                  <li class="form-item">
+                    <label for="" class="form-label"><em class="warn">*</em>密码：</label>
+                    <span class="form-act"><input class="x-input auto-password-check-handle" type="password" name="pam_account[register_password]" maxlength="16" placeholder="请输入密码6-16位字母和数字的组合"  data-caution="请填写密码，6-16个字符 "> 
+                    <span class="password-check" style="display：none">
+                      <q>密码强度：</q>
+                      <em class="poor">差</em>
+                      <em class="weak">弱</em>
+                      <em class="good">中</em>
+                      <em class="strong">强</em>
+                      <span class="progress">
+                        <span class="percent"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </li>
+                  <li class="form-item">
+                    <label for="" class="form-label">
+                      <em class="warn">*</em>确认密码：
+                    </label>
+                    <span class="form-act">
+                      <input class="x-input " type="password" name="pam_account[psw_confirm]" id="dom_el_aace762" maxlength="20" placeholder="再次填写密码" vtype="equal:pam_account[register_password]" data-caution="密码与确认密码不相符，请重新填写" oncontextmenu="return false;" onpaste="return false;">
+                      <span class="validation-messagebox"> 
+                      </span>
+                    </span>
+                  </li>
+
+                  <li class="form-item action-verifycode">
+                    <label for="" class="form-label"><em class="warn">*</em>验证码：</label>
+                    <span class="form-act">
+                      <input class="x-input verify-input img_input" type="text" name="signupverifycode" placeholder="填写验证码" > 
+                      <span class="verify-code auto-change-verify-handle"> 
+                      <a href="/index-gen_vcode-registerVCODE-4.html" class="verify-code auto-change-verify-handle lnklike">看不清?换一张</a>      
+                    </span>
+                  </li>
+                  <!-- 短信验证码 -->
+                  <li class="form-item action-need-verify mobile-need-verify" style="display:none;">
+                    <label for="" class="form-label">验证码：</label>
+                    <span class="form-act">
+                      <input class="x-input verify-input" type="text" name="vcode" id="dom_el_aace764" placeholder="填写短信验证码" data-caution="请正确填写短信验证码" vtype="required">        
+                      <a href="/passport-send_vcode_sms.html" class="btn btn-caution action-get-verifycode fr">
+                        <span><span>获取短信验证码</span></span>
+                      </a>
+                    </span>
+                  </li> 
+                  <li class="form-item action-need-verify email-need-verify">
+                    <label for="" class="form-label">验证码：</label>
+                    <span class="form-act">
+                      <input class="x-input verify-input" type="text" name="email_vcode" id="dom_el_aace765" placeholder="填写邮箱验证码" data-caution="请正确填写邮箱验证码" vtype="required">        <a href="/passport-send_vcode_email.html" class="btn btn-caution action-get-verifycode fr"><span><span>获取邮箱验证码</span></span></a>
+                    </span>
+                  </li>
+                  <li class="form-item form-item-license">
+                    <span class="form-act">
+                      <input type="checkbox" id="license" name="license" checked="checked" class="x-check" vtype="onerequired" data-caution="请选择同意">
+                      <label for="license" class="form-sub-label"> 同意 <a href="/passport-license.html" class="lnklike" target="_blank">莎莎网使用条款</a> 和 <a href="/passport-privacy.html" class="lnklike" target="_blank">隐私保护政策</a></label>
+                      <span class="validation-messagebox"></span>
+                    </span>
+                  </li>
+                  <li class="form-item form-item-license">
+                    <span class="form-act">
+                      <input type="checkbox" class="x-check regular-checkbox" checked="checked" id="receive_promotion" name="receive_promotion" value="on" autocomplete="off"> 
+                      <label for="receive_promotion" class="form-sub-label">您同意接收莎莎发送的与产品或者服务有关的推广宣传资料</label>
+                      <span class="validation-messagebox"></span>
+                    </span>
+                  </li>
+                  <li class="form-item-normal">
+                    <label for="" class="form-label"></label>
+                    <span class="form-act">
+                      <button type="submit" class="btn btn-major btn-big" rel="_request">
+                        <span><span>注册</span></span>
+                      </button>      
+                    </span>
+                  </li>
+                </ul>
+              </form>
+
+            </div>  
+          </div>
+        </div>            
+      </div>
+  </div>       
+</div>     
+</body>
+</html>

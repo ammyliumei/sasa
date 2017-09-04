@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<!-- sasa图片 -->
+  <div class="header-main">
+    <div class="login_container">
+      <div class="sotelogo">
+        <a href="../index.html">
+          <img alt="Ecstore-demo" src="../images/sasa_logo.png" border="0">
+        </a>               
+      </div>
+    </div>
+  </div>
+    <!-- 登陆模块 -->
+  <div id="login_box">
+    <div class="login_container">
+      <!-- 登陆盒子 -->
+      <div class="login-page-wrap clb" >
+        <div class="loginup-article fr">
+          <div id="page_loginup" class="loginupin-content loginup">
+            <!-- 注册标题 -->
+            <div class="login-title">
+              <div class="login-title-text">
+                  用户登陆
+                <span class="descrip fr">还没有莎莎网帐号？
+                  <a href="login.html">立即注册</a>
+                </span>
+              </div>
+            </div>
+            <!-- 注册盒子 -->
+            <div class="loginupbox">
+              <form action="/passport-create.html" method="post">
+                <input name="forward" type="hidden" value="">
+                <input name="mini" type="hidden" value="">
+                <ul>
+                <!-- 用户账号 -->
+                  <li class="form-item">
+                    <label for="" class="form-label"><em class="warn">*</em>邮箱/手机：</label>
+                    <span class="form-act">
+                      <input class="x-input action-account-check J_uname" type="text" name="pam_account[login_name]" id="dom_el_aace760" placeholder="邮箱/手机号" vtype="required" >
+                      <span class="validation-messagebox"></span>
+                      </span>
+                  </li>
+                  <li class="form-item">
+                    <label for="" class="form-label"><em class="warn">*</em>密码：</label>
+                    <span class="form-act"><input class="x-input auto-password-check-handle" type="password" name="pam_account[login_password]" maxlength="16" placeholder="填写密码 "> 
+                    
+                     
+                    </span>
+                  </li>
+                  <li class="form-item action-verifycode">
+                    <label for="" class="form-label"><em class="warn">*</em>验证码：</label>
+                    <span class="form-act">
+                      <input class="x-input verify-input img_input" type="text" name="loginupverifycode" placeholder="填写验证码" > 
+                      <span class="verify-code auto-change-verify-handle"> 
+                        <a href="/index-gen_vcode-loginVCODE-4.html" class="verify-code auto-change-verify-handle lnklike">看不清?换一张</a>      
+                     </span>
+                  </li>
+                  <li class="form-item">
+                    <label for="" class="form-label"></label>
+                    <span class="form-act">
+                      <input type="hidden" name="is_remember" id="for_remember" class="x-check action-remember-account" checked="checked">
+                      <input type="checkbox" name="site_autologin" id="for_auto_signin" class="x-check action-auto-signin">
+                      <label for="for_auto_signin" class="form-sub-label">记住我</label>
+                      <a href="/passport-lost.html" style="vertical-align: middle; color:#ed3f7e;">忘记密码？</a>
+                    </span>
+                  </li>
+
+                  <li class="form-item-normal">
+                    <label for="" class="form-label"></label>
+                    <span class="form-act">
+                      <button type="submit" class="btn btn-major btn-big" rel="_request">
+                        <span><span>登陆</span></span>
+                      </button>      
+                    </span>
+                  </li>
+                </ul>
+              </form>
+
+            </div>  
+          </div>
+        </div>            
+      </div>
+  </div>       
+</div>     
+</body>
+</html>

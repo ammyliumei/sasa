@@ -4,8 +4,10 @@
 /*轮播图*/
 #banner{
 	position:relative;
+
 	.banner_container{
 		position:relative;
+		width: 100%;
 		img{
 			width: 100%;
 			height: 420px;
@@ -14,8 +16,7 @@
 			left:0;
 
 		}
-	
-	ul{
+		ul.banner_dot{
 			position:absolute;
 			bottom:10px;
 			left:50%;
@@ -104,9 +105,516 @@
 	}
 /*主页内容*/
 #main_content{
-	height: 300px;
+
+	.container{
+		overflow:hidden;
+	}
+	overflow:hidden;
 	background: $mainBackgroundGrey ;
 	position:relative;
+	.title_img{    
+		width: 1200px;
+    	height: 26px;
+	    margin: 0 auto;
+	    margin-bottom: 10px;
+	    margin-top: 34px;
+    }
+		// 每日必看
+		// 标题
+	.must_check_title{
+		background:url('../images/must_check.png')no-repeat;
+	}
+	.container{
+			width:1220px;
+		}
+	// 每日内容
+	.must_check_cont{
+		overflow:hidden;
+	    // 每一项内容链接
+	    .sasa_mustcheck_a{
+	    	width: 590px;
+		    overflow: hidden;
+		    float: left;
+		    margin:0 20px 10px 0;
+		    // 每一项
+			.sasa_mustcheck_item {
+			    width: 592px;
+			    height: 260px;
+			    overflow: hidden;
+			    background-color: white;
+			    margin-bottom: 16px;
+			    border: 1px solid #eee;
+			    float: left;
+				// 左侧图片
+			    .sasa_mustcheck_img {
+				    width: 360px;
+				    height: 100%;
+				    display: block;
+				    float: left;
+				}
+				.sasa_mustcheck_info {
+				    width: 230px;
+				    height: 100%;
+				    float: right;
+				    position: relative;
+					 p {
+					    text-align: center;
+					    &.sasa_mustcheck_title {
+						    margin-top: 60px;
+						    font-size: 22px;
+						    color: #e93b78;
+						}
+						&.sasa_mustcheck_subtit {
+						    color: #5a5a5a;
+						    font-size: 17px;
+						    margin-top: 10px;
+						}
+						&.sasa_mustcheck_date {
+						    color: #5a5a5a;
+						    font-size: 13px;
+						    margin-top: 3px;
+						}
+					}
+					.sasa_mustcheck_btn {
+					    display: block;
+					    width: 108px;
+					    height: 32px;
+					    line-height: 32px;
+					    text-align: center;
+					    position: absolute;
+					    bottom: 50px;
+					    left: 62px;
+					    text-decoration: none;
+					    color: #fff;
+					    font-size: 16px;
+					    background-color: #e93b78;
+					    letter-spacing: 1px;
+					}
+
+				}
+				
+			}
+		}
+	}	
+    
+		
+
+	// 限时抢购
+	.limitted_offer{
+		.limitted_offer_title{
+			background:url('../images/limitted_offer.png')no-repeat;
+		}
+		.sasa_limit_subtit{
+		    font-size: 20px;
+		    font-family: "Microsoft Yahei",Helvetica,Arial,STXihei,SimSun,sans-serif;
+		    text-align: center;
+		    height:50px;
+		    line-height:30px;
+		}
+		// 限购的所有产品盒子
+		.limitted_offer_cont{
+			a{
+				.sasa_limit_item{
+				    width: 1200px;
+				    height: 360px;
+				    overflow: hidden;
+				    background-color: #fff;
+				    margin-bottom:20px;
+				    &:hover {
+					    box-shadow: 0 0 2px 5px #eee;
+					}
+				    .sasa_limit_imgWrapper {
+					    width: 640px;
+					    height: 360px;
+					    position: relative;
+					    float: left;
+					    overflow: hidden;
+					    text-align: center;
+					    .sasa_limit_img {
+						    width: 100%;
+						    height: auto;
+						}
+						//
+						.sasa_limit_count {
+							width: 68px;
+						    height: 68px;
+						    line-height: 68px;
+						    display:block;
+						    border-radius:50%;
+						    left: 16px;
+						    top: 12px;
+						    display: block;
+						    position: absolute;
+						    background-color:$mainColor;
+						    z-index: 1;
+						    color: #fff;
+						    span{
+						    	font-family: "Arial";
+						    
+							    font-size: 24px;
+							    font-weight: normal;
+							    font-style: italic;
+						    }
+						    
+						}
+						// 
+					}
+					.sasa_limit_info {
+					    width: 480px;
+					    height: 280px;
+					    margin: 40px 40px 0 0;
+					    float: right;
+					    position: relative;
+					    .sasa_limit_countdown {
+						    height: 24px;
+						    overflow: hidden;
+						    padding: 0 10px;
+						    background-color: #414141;
+						    color: #fff;
+						    line-height: 24px;
+						    text-align: center;
+						    font-size: 13px;
+						    display: inline-block;
+						}
+						.sasa_limit_detail {
+						    width: 100%;
+						    height: 215px;
+						    overflow: hidden;
+						    position: relative;
+						    .sasa_limit_detail_intro {
+							    width: 100%;
+							    height: 120px;
+							    font-size: 17px;
+							    line-height: 30px;
+							    margin-top: 10px;
+							    margin-bottom: 10px;
+							    overflow: hidden;
+							    color: #222;
+							    .sasa_limit_font_icon {
+								    font-size: 18px;
+								    display: block;
+								    float: left;
+								    margin-right: 5px;
+								    color: #d9d9d9;
+								}
+							}
+							.sasa_limit_detail_title {
+							    width: 100%;
+							    height: 20px;
+							    position: absolute;
+							    bottom: 44px;
+							    left: 0;
+							    font-size: 13px;
+							    overflow: hidden;
+							    white-space: nowrap;
+							    text-overflow: ellipsis;
+							    color: #666;
+							}
+							.sasa_limit_detail_price {
+							    width: 100%;
+							    height: 30px;
+							    position: absolute;
+							    bottom: 0;
+							    left: 0;
+							    .sasa_limit_pirce_cur {
+								    font-weight: 600;
+								    color: #fc3f83;
+								    float: left;
+								    display: block;
+								    height: 30px;
+								    line-height: 30px;
+								    .sasa_limit_price_cur_sig {
+									    font-size: 20px;
+									    display: block;
+									    float: left;
+									    margin-top: -4px;
+									}
+									.sasa_limit_price_cur_num {
+									    font-size: 32px;
+									    font-family: "Arial";
+									    line-height: 30px;
+									}
+								}
+								.sasa_limit_price_old {
+								    color: #999;
+								    float: left;
+								    margin-top: 9px;
+								    margin-left: 7px;
+								    position: relative;
+								    line-height: 23px;
+								    height: 23px;
+								    font-size: 13px;
+
+								}
+							}
+						}
+						.sasa_limit_bottom {
+						    width: 480px;
+						    height: 32px;
+						    position: absolute;
+						    bottom: 0;
+						    .sasa_limit_sold {
+							    width: 100px;
+							    height: 13px;
+							    line-height: 13px;
+							    margin-top: 19px;
+							    float: left;
+							    color: #999;
+							    .sasa_limit_sold {
+								    width: 100px;
+								    height: 13px;
+								    line-height: 13px;
+								    margin-top: 19px;
+								    float: left;
+								    color: #999;
+							    }	
+							}
+							.sasa_limit_btn {
+							    width: 92px;
+							    height: 32px;
+							    display: block;
+							    float: right;
+							    line-height: 32px;
+							    text-align: center;
+							    cursor: pointer;
+							    background-color: #e93b78;
+							    color: #fff;
+							    font-size: 16px;
+							    letter-spacing: 1px;
+							}
+						}
+					}
+				}
+			}
+		}
+		// 加载更多
+		.limit_more{
+		    text-align: center;
+		    padding-top: 20px;
+		    a {
+			    width: 160px;
+			    font-weight:800;
+			    border-radius: 24px;
+			    background: #fc3f83;
+			    display: block;
+			    height: 36px;
+			    line-height: 36px;
+			    font-size: 14px;
+			    color: #fff;
+			    margin: 0 auto;
+			    span {
+				    font-size: 8px;
+				    position: relative;
+				    top: -1px;
+				}
+			}
+			   
+		}
+	}
+
+	
+	// 排名
+	.title_ranking{
+
+		.title_ranking_title{
+			background:url('../images/title_ranking.png')no-repeat;
+		}
+		
+		ul.title_ranking_cont{
+
+			overflow:hidden;
+			
+			li.sasa_rank_column{
+					float:left;
+					margin-left:20px;
+					h4{
+						text-align:center;
+					}
+				// 区域内所有产品盒子
+				ul.goodstop{
+					& li:nth-child(1) {
+						.sasa_rank_icon{
+							background:url('../images/ranking_1.png');
+						}
+					}
+					& li:nth-child(2) {
+						.sasa_rank_icon{
+							background:url('../images/ranking_2.png');
+						}
+					}
+					& li:nth-child(3) {
+						.sasa_rank_icon{
+							background:url('../images/ranking_3.png');
+						}
+					}
+					li.sasa_rank_item {
+
+					    width: 362px;
+					    height: 80px;
+					    padding: 10px;
+					    position: relative;
+					    border-top: 1px solid #eee;
+					    .sasa_rank_icon_fst {
+						    background: url(/themes/default/widgets/sales_ranking_list/images/ranking_1.png) no-repeat;
+						}
+						.sasa_rank_icon {
+						    width: 40px;
+						    height: 40px;
+						    position: absolute;
+						    left: -3px;
+						    top: -3px;
+						}
+						a.oodstop_imgsmall{
+							height:80px;
+							width: 80px;
+						}
+						.sasa_rank_item_info {
+						    width: 272px;
+						    height: 80px;
+						    float: right;
+						    .sasa_rank_item_name {
+							    width: 100%;
+							    height: 36px;
+							    line-height: 18px;
+							    overflow: hidden;
+							    margin-top: 13px;
+							    font-size: 13px;
+							    a{color:#000;}
+							}
+							.sasa_rank_item_price {
+							    width: 100%;
+							    height: 20px;
+							    margin-top: 7px;
+							    .sasa_rank_item_price_cur {
+								    float: left;
+								    color: #fc3f83;
+								    font-size: 16px;
+								    line-height: 20px;
+								    height: 20px;
+								}
+								.sasa_rank_item_price_old {
+								    float: left;
+								    margin-left: 5px;
+								    color: #999;
+								    height: 21px;
+								    line-height: 21px;
+								    position: relative;
+								}
+								.sasa_rank_item_sold {
+								    float: right;
+								    line-height: 20px;
+								    color: #999;
+								    font-size: 11.3px;
+								    margin-right: 10px;
+								}
+							}
+						}
+					}
+				}
+				
+			}
+			
+		}
+	}
+	
+
+
+
+
+	// 新品
+	.new_arrival{
+		.new_arrival_title{
+		background:url('../images/new_arrival.png')no-repeat;
+		}
+		.new_arrival_cont{
+			font-size: 12px;
+			.sasa_new_item {
+			    background-color: #fff;
+			    height: 380px;
+			    float: left;
+			    margin-right: 12px;
+			    margin-bottom: 12px;
+			    .sasa_new_imgWrapper {
+				    height: 271px;
+				    width: 271px;
+				    padding: 10px;
+				    position: relative;
+				    .sasa_new_img {
+					    max-width: 271px;
+					    max-height: 271px;
+					}
+				    .sasa_new_arrival_icon {
+
+					    width: 40px;
+					    height: 40px;
+					    text-align: center;
+					    position: absolute;
+					    left: 10px;
+					    top: 10px;
+					    background: #80b53f;
+					    p {
+						    padding: 6px 0;
+						    font-size: 13px;
+						    line-height: 14px;
+						    color: #fff;
+						    letter-spacing: 1px;
+						}
+					}
+					.sasa_new_source_icon {
+					    margin-right: 6px;
+					    width: 80px;
+					    height: 20px;
+					    position: absolute;
+					    top: 10px;
+					    right: 10px;
+					}
+
+				}
+				.sasa_new_intro {
+				    width: 251px;
+				    height: 33px;
+				    line-height: 16px;
+				    padding: 0 20px;
+				    margin-bottom: 16px;
+				    overflow: hidden;
+				    a {
+					    font-size: 13px;
+					    color: #222;
+					}
+				}
+				.sasa_new_price {
+				    width: 251px;
+				    height: 20px;
+				    padding: 0 20px;
+				    margin-bottom: 20px;
+				    .sasa_new_price_cur_sign {
+					    display: block;
+					    float: left;
+					    margin-top: -1px;
+					    font-size: 13px;
+					    color: #fc3f83;	
+					}
+					.sasa_new_price_cur_num {
+					    display: block;
+					    float: left;
+					    font-size: 18px;
+					    color: #fc3f83;
+					}
+					.sasa_new_price_old {
+					    float: left;
+					    color: #999;
+					    margin-left: 5px;
+					    margin-top: 3px;
+					    line-height: 21px;
+					    height: 21px;
+					    position: relative;
+					}			
+				}
+			}
+		}
+	}
+	
+	// 楼梯
 	.floor_location{
 		position: absolute;
 	    left: 36.5px;
@@ -144,6 +652,7 @@
 	    }
 	    
 	}
+	
 
 }
 

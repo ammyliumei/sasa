@@ -1,0 +1,195 @@
+@import "var";
+@import "common";
+@import "load";
+// 限时抢购
+    .limitted_offer{
+        .limitted_offer_title{background:url('../images/limitted_offer.png')no-repeat;}
+        .title_img {
+            width: 1200px;
+            height: 26px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            margin-top: 34px;
+        }
+        .sasa_limit_subtit{
+            font-size: 20px;
+            font-family: "Microsoft Yahei",Helvetica,Arial,STXihei,SimSun,sans-serif;
+            text-align: center;
+            height:50px;
+            line-height:30px;
+        }
+        // 限购的所有产品盒子
+        .limitted_offer_cont{
+            a{
+                .sasa_limit_item{
+                    width: 1200px;
+                    height: 360px;
+                    overflow: hidden;
+                    background-color: #fff;
+                    margin-bottom:20px;
+                    &:hover {box-shadow: 0 0 2px 5px #eee;}    
+                    .sasa_limit_imgWrapper {
+                        width: 640px;
+                        height: 360px;
+                        position: relative;
+                        float: left;
+                        overflow: hidden;
+                        text-align: center;
+                        .sasa_limit_img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        //
+                        .sasa_limit_count {
+                            width: 68px;
+                            height: 68px;
+                            line-height: 68px;
+                            display:block;
+                            border-radius:50%;
+                            left: 16px;
+                            top: 12px;
+                            display: block;
+                            position: absolute;
+                            background-color:$mainColor;
+                            z-index: 1;
+                            color: #fff;
+                            span{
+                                font-family: "Arial";
+                            
+                                font-size: 24px;
+                                font-weight: normal;
+                                font-style: italic;
+                            }
+                            
+                        }
+                        // 
+                    }
+                    .sasa_limit_info {
+                        width: 480px;
+                        height: 280px;
+                        margin: 40px 40px 0 0;
+                        float: right;
+                        position: relative;
+                        .sasa_limit_countdown {
+                            height: 24px;
+                            overflow: hidden;
+                            padding: 0 10px;
+                            background-color: #414141;
+                            color: #fff;
+                            line-height: 24px;
+                            text-align: center;
+                            font-size: 13px;
+                            display: inline-block;
+                        }
+                        .sasa_limit_detail{
+                            width: 100%;
+                            height: 215px;
+                            overflow: hidden;
+                            position: relative;
+                            .sasa_limit_detail_intro {
+                                width: 100%;
+                                height: 120px;
+                                font-size: 17px;
+                                line-height: 30px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                overflow: hidden;
+                                color: #222;
+                                .sasa_limit_font_icon {
+                                    font-size: 18px;
+                                    display: block;
+                                    float: left;
+                                    margin-right: 5px;
+                                    color: #d9d9d9;
+                                }
+                            }
+                            .sasa_limit_detail_title {
+                                width: 100%;
+                                height: 20px;
+                                position: absolute;
+                                bottom: 44px;
+                                left: 0;
+                                font-size: 13px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                color: #666;
+                            }
+                            .sasa_limit_detail_price {
+                                width: 100%;
+                                height: 30px;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                .sasa_limit_pirce_cur {
+                                    font-weight: 600;
+                                    color: #fc3f83;
+                                    float: left;
+                                    display: block;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    .sasa_limit_price_cur_sig {
+                                        font-size: 20px;
+                                        display: block;
+                                        float: left;
+                                        margin-top: -4px;
+                                    }
+                                    .sasa_limit_price_cur_num {
+                                        font-size: 32px;
+                                        font-family: "Arial";
+                                        line-height: 30px;
+                                    }
+                                }
+                                .sasa_limit_price_old {
+                                    color: #999;
+                                    float: left;
+                                    margin-top: 9px;
+                                    margin-left: 7px;
+                                    position: relative;
+                                    line-height: 23px;
+                                    height: 23px;
+                                    font-size: 13px;
+
+                                }
+                            }
+                        }
+                        .sasa_limit_bottom {
+                            width: 480px;
+                            height: 32px;
+                            position: absolute;
+                            bottom: 0;
+                            .sasa_limit_sold {
+                                width: 100px;
+                                height: 13px;
+                                line-height: 13px;
+                                margin-top: 19px;
+                                float: left;
+                                color: #999;
+                                .sasa_limit_sold {
+                                    width: 100px;
+                                    height: 13px;
+                                    line-height: 13px;
+                                    margin-top: 19px;
+                                    float: left;
+                                    color: #999;
+                                }   
+                            }
+                            .sasa_limit_btn {
+                                width: 92px;
+                                height: 32px;
+                                display: block;
+                                float: right;
+                                line-height: 32px;
+                                text-align: center;
+                                cursor: pointer;
+                                background-color: #e93b78;
+                                color: #fff;
+                                font-size: 16px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

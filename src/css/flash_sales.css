@@ -627,119 +627,11 @@ address, em, i {
   z-index: 1;
 }
 
-/*轮播图*/
-#banner {
-  position: relative;
+.limitted_offer .limitted_offer_title {
+  background: url("../images/limitted_offer.png") no-repeat;
 }
 
-#banner .banner_container {
-  position: relative;
-  width: 100%;
-}
-
-#banner .banner_container img {
-  width: 100%;
-  height: 420px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#banner .banner_container ul.banner_dot {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-}
-
-#banner .banner_container ul.banner_dot li {
-  float: left;
-  background: #333;
-  opacity: .4;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin-left: 7px;
-  margin-right: 7px;
-  text-indent: -9999px;
-  overflow: hidden;
-  border: 3px solid rgba(255, 255, 255, 0.7);
-}
-
-#banner .banner_container ul.banner_dot li.dotactive {
-  background-color: #fa3778;
-  opacity: 1;
-}
-
-.sasa_broadcast_outer_wrapper {
-  background-color: #ececec;
-  overflow: hidden;
-}
-
-.sasa_broadcast_outer_wrapper .sasa_broadcast {
-  font-size: 12px;
-}
-
-.sasa_broadcast_outer_wrapper .sasa_broadcast .sasa_broadcast_word_icon {
-  color: #fa3778;
-  font-weight: 700;
-  line-height: 28px;
-  text-align: right;
-  height: 28px;
-  line-height: 28px;
-  float: left;
-}
-
-.sasa_broadcast_outer_wrapper .sasa_broadcast .sasa_broadcast_content {
-  width: 270px;
-  height: 28px;
-  overflow: hidden;
-  float: left;
-  margin-left: 20px;
-}
-
-.sasa_broadcast_outer_wrapper .sasa_broadcast .sasa_broadcast_content .sasa_broadcast_content_inner {
-  width: 100%;
-  height: 168px;
-}
-
-.sasa_broadcast_outer_wrapper .sasa_broadcast .sasa_broadcast_content .sasa_broadcast_content_inner .sasa_broadcast_adv {
-  width: 100%;
-  height: 28px;
-  line-height: 28px;
-}
-
-.sasa_broadcast_outer_wrapper .sasa_broadcast .sasa_broadcast_content .sasa_broadcast_content_inner .sasa_broadcast_adv a {
-  text-decoration: none;
-  color: #999;
-  display: inline-block;
-  line-height: 28px;
-}
-
-.sasa_broadcast_outer_wrapper .sasa_broadcast_more {
-  display: block;
-  float: left;
-  height: 28px;
-  line-height: 28px;
-}
-
-/*中部承诺*/
-.sasa_promise_center .sasa_promise_wrapper {
-  background: #f2f2f2;
-  border: 0;
-}
-
-/*主页内容*/
-#main_content {
-  overflow: hidden;
-  background: #f2f2f2;
-  position: relative;
-}
-
-#main_content .container {
-  overflow: hidden;
-}
-
-#main_content .title_img {
+.limitted_offer .title_img {
   width: 1200px;
   height: 26px;
   margin: 0 auto;
@@ -747,92 +639,7 @@ address, em, i {
   margin-top: 34px;
 }
 
-#main_content .must_check_title {
-  background: url("../images/must_check.png") no-repeat;
-}
-
-#main_content .container {
-  width: 1220px;
-}
-
-#main_content .must_check_cont {
-  overflow: hidden;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a {
-  width: 590px;
-  overflow: hidden;
-  float: left;
-  margin: 0 20px 10px 0;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item {
-  width: 592px;
-  height: 260px;
-  overflow: hidden;
-  background-color: white;
-  margin-bottom: 16px;
-  border: 1px solid #eee;
-  float: left;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item .sasa_mustcheck_img {
-  width: 360px;
-  height: 100%;
-  display: block;
-  float: left;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item .sasa_mustcheck_info {
-  width: 230px;
-  height: 100%;
-  float: right;
-  position: relative;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item .sasa_mustcheck_info p {
-  text-align: center;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item .sasa_mustcheck_info p.sasa_mustcheck_title {
-  margin-top: 60px;
-  font-size: 22px;
-  color: #e93b78;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item .sasa_mustcheck_info p.sasa_mustcheck_subtit {
-  color: #5a5a5a;
-  font-size: 17px;
-  margin-top: 10px;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item .sasa_mustcheck_info p.sasa_mustcheck_date {
-  color: #5a5a5a;
-  font-size: 13px;
-  margin-top: 3px;
-}
-
-#main_content .must_check_cont .sasa_mustcheck_a .sasa_mustcheck_item .sasa_mustcheck_info .sasa_mustcheck_btn {
-  display: block;
-  width: 108px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  position: absolute;
-  bottom: 50px;
-  left: 62px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  background-color: #e93b78;
-  letter-spacing: 1px;
-}
-
-#main_content .limitted_offer .limitted_offer_title {
-  background: url("../images/limitted_offer.png") no-repeat;
-}
-
-#main_content .limitted_offer .sasa_limit_subtit {
+.limitted_offer .sasa_limit_subtit {
   font-size: 20px;
   font-family: "Microsoft Yahei",Helvetica,Arial,STXihei,SimSun,sans-serif;
   text-align: center;
@@ -840,7 +647,7 @@ address, em, i {
   line-height: 30px;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item {
   width: 1200px;
   height: 360px;
   overflow: hidden;
@@ -848,11 +655,11 @@ address, em, i {
   margin-bottom: 20px;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item:hover {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item:hover {
   box-shadow: 0 0 2px 5px #eee;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper {
   width: 640px;
   height: 360px;
   position: relative;
@@ -861,12 +668,12 @@ address, em, i {
   text-align: center;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper .sasa_limit_img {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper .sasa_limit_img {
   width: 100%;
   height: auto;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper .sasa_limit_count {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper .sasa_limit_count {
   width: 68px;
   height: 68px;
   line-height: 68px;
@@ -881,14 +688,14 @@ address, em, i {
   color: #fff;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper .sasa_limit_count span {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_imgWrapper .sasa_limit_count span {
   font-family: "Arial";
   font-size: 24px;
   font-weight: normal;
   font-style: italic;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info {
   width: 480px;
   height: 280px;
   margin: 40px 40px 0 0;
@@ -896,7 +703,7 @@ address, em, i {
   position: relative;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_countdown {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_countdown {
   height: 24px;
   overflow: hidden;
   padding: 0 10px;
@@ -908,14 +715,14 @@ address, em, i {
   display: inline-block;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail {
   width: 100%;
   height: 215px;
   overflow: hidden;
   position: relative;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_intro {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_intro {
   width: 100%;
   height: 120px;
   font-size: 17px;
@@ -926,7 +733,7 @@ address, em, i {
   color: #222;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_intro .sasa_limit_font_icon {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_intro .sasa_limit_font_icon {
   font-size: 18px;
   display: block;
   float: left;
@@ -934,7 +741,7 @@ address, em, i {
   color: #d9d9d9;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_title {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_title {
   width: 100%;
   height: 20px;
   position: absolute;
@@ -947,7 +754,7 @@ address, em, i {
   color: #666;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price {
   width: 100%;
   height: 30px;
   position: absolute;
@@ -955,7 +762,7 @@ address, em, i {
   left: 0;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_pirce_cur {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_pirce_cur {
   font-weight: 600;
   color: #fc3f83;
   float: left;
@@ -964,20 +771,20 @@ address, em, i {
   line-height: 30px;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_pirce_cur .sasa_limit_price_cur_sig {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_pirce_cur .sasa_limit_price_cur_sig {
   font-size: 20px;
   display: block;
   float: left;
   margin-top: -4px;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_pirce_cur .sasa_limit_price_cur_num {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_pirce_cur .sasa_limit_price_cur_num {
   font-size: 32px;
   font-family: "Arial";
   line-height: 30px;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_price_old {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_detail .sasa_limit_detail_price .sasa_limit_price_old {
   color: #999;
   float: left;
   margin-top: 9px;
@@ -988,14 +795,14 @@ address, em, i {
   font-size: 13px;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom {
   width: 480px;
   height: 32px;
   position: absolute;
   bottom: 0;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom .sasa_limit_sold {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom .sasa_limit_sold {
   width: 100px;
   height: 13px;
   line-height: 13px;
@@ -1004,7 +811,7 @@ address, em, i {
   color: #999;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom .sasa_limit_sold .sasa_limit_sold {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom .sasa_limit_sold .sasa_limit_sold {
   width: 100px;
   height: 13px;
   line-height: 13px;
@@ -1013,7 +820,7 @@ address, em, i {
   color: #999;
 }
 
-#main_content .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom .sasa_limit_btn {
+.limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom .sasa_limit_btn {
   width: 92px;
   height: 32px;
   display: block;
@@ -1025,272 +832,4 @@ address, em, i {
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
-}
-
-#main_content .limitted_offer .limit_more {
-  text-align: center;
-  padding-top: 20px;
-}
-
-#main_content .limitted_offer .limit_more a {
-  width: 160px;
-  font-weight: 800;
-  border-radius: 24px;
-  background: #fc3f83;
-  display: block;
-  height: 36px;
-  line-height: 36px;
-  font-size: 14px;
-  color: #fff;
-  margin: 0 auto;
-}
-
-#main_content .limitted_offer .limit_more a span {
-  font-size: 8px;
-  position: relative;
-  top: -1px;
-}
-
-#main_content .title_ranking .title_ranking_title {
-  background: url("../images/title_ranking.png") no-repeat;
-}
-
-#main_content .title_ranking ul.title_ranking_cont {
-  overflow: hidden;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column {
-  float: left;
-  margin-left: 20px;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column h4 {
-  text-align: center;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li:nth-child(1) .sasa_rank_icon {
-  background: url("../images/ranking_1.png");
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li:nth-child(2) .sasa_rank_icon {
-  background: url("../images/ranking_2.png");
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li:nth-child(3) .sasa_rank_icon {
-  background: url("../images/ranking_3.png");
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item {
-  width: 362px;
-  height: 80px;
-  padding: 10px;
-  position: relative;
-  border-top: 1px solid #eee;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_icon_fst {
-  background: url(/themes/default/widgets/sales_ranking_list/images/ranking_1.png) no-repeat;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_icon {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: -3px;
-  top: -3px;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item a.oodstop_imgsmall {
-  height: 80px;
-  width: 80px;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_item_info {
-  width: 272px;
-  height: 80px;
-  float: right;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_item_info .sasa_rank_item_name {
-  width: 100%;
-  height: 36px;
-  line-height: 18px;
-  overflow: hidden;
-  margin-top: 13px;
-  font-size: 13px;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_item_info .sasa_rank_item_name a {
-  color: #000;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_item_info .sasa_rank_item_price {
-  width: 100%;
-  height: 20px;
-  margin-top: 7px;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_item_info .sasa_rank_item_price .sasa_rank_item_price_cur {
-  float: left;
-  color: #fc3f83;
-  font-size: 16px;
-  line-height: 20px;
-  height: 20px;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_item_info .sasa_rank_item_price .sasa_rank_item_price_old {
-  float: left;
-  margin-left: 5px;
-  color: #999;
-  height: 21px;
-  line-height: 21px;
-  position: relative;
-}
-
-#main_content .title_ranking ul.title_ranking_cont li.sasa_rank_column ul.goodstop li.sasa_rank_item .sasa_rank_item_info .sasa_rank_item_price .sasa_rank_item_sold {
-  float: right;
-  line-height: 20px;
-  color: #999;
-  font-size: 11.3px;
-  margin-right: 10px;
-}
-
-#main_content .new_arrival .new_arrival_title {
-  background: url("../images/new_arrival.png") no-repeat;
-}
-
-#main_content .new_arrival .new_arrival_cont {
-  font-size: 12px;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item {
-  background-color: #fff;
-  height: 380px;
-  float: left;
-  margin-right: 12px;
-  margin-bottom: 12px;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_imgWrapper {
-  height: 271px;
-  width: 271px;
-  padding: 10px;
-  position: relative;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_imgWrapper .sasa_new_img {
-  max-width: 271px;
-  max-height: 271px;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_imgWrapper .sasa_new_arrival_icon {
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  background: #80b53f;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_imgWrapper .sasa_new_arrival_icon p {
-  padding: 6px 0;
-  font-size: 13px;
-  line-height: 14px;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_imgWrapper .sasa_new_source_icon {
-  margin-right: 6px;
-  width: 80px;
-  height: 20px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_intro {
-  width: 251px;
-  height: 33px;
-  line-height: 16px;
-  padding: 0 20px;
-  margin-bottom: 16px;
-  overflow: hidden;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_intro a {
-  font-size: 13px;
-  color: #222;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_price {
-  width: 251px;
-  height: 20px;
-  padding: 0 20px;
-  margin-bottom: 20px;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_price .sasa_new_price_cur_sign {
-  display: block;
-  float: left;
-  margin-top: -1px;
-  font-size: 13px;
-  color: #fc3f83;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_price .sasa_new_price_cur_num {
-  display: block;
-  float: left;
-  font-size: 18px;
-  color: #fc3f83;
-}
-
-#main_content .new_arrival .new_arrival_cont .sasa_new_item .sasa_new_price .sasa_new_price_old {
-  float: left;
-  color: #999;
-  margin-left: 5px;
-  margin-top: 3px;
-  line-height: 21px;
-  height: 21px;
-  position: relative;
-}
-
-#main_content .floor_location {
-  position: absolute;
-  left: 36.5px;
-  top: 40px;
-  z-index: 10;
-  display: block;
-}
-
-#main_content .floor_location .flooricon li {
-  padding: 5px;
-  background: #fff;
-  font-size: 11px;
-  text-align: center;
-  margin-bottom: 1px;
-}
-
-#main_content .floor_location .flooricon li:hover {
-  background: #ec3e7d;
-  color: #fff;
-}
-
-#main_content .floor_location .flooricon li:hover a {
-  color: #fff;
-}
-
-#main_content .floor_location .flooricon li:hover i.iconfont {
-  color: #fff;
-}
-
-#main_content .floor_location .flooricon li a {
-  color: #3e3e3e;
-}
-
-#main_content .floor_location .flooricon li a i {
-  font-size: 25px;
-  display: block;
-  margin: 0 auto;
 }
