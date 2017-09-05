@@ -1,0 +1,10 @@
+@import "var";
+@import "common";
+@import "load";
+// 导航条部分，自动影藏部分
+.list_nav .nav_category .container .all_category{
+        .all_category_title_box{display:none;}
+        &:hover{
+            .all_category_title_box{display:block;}
+        }                  
+}

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*枚红色*/
+/*字体深灰色*/
+/*背景浅灰色*/
+/*公告背景中等灰色*/
+/*white*/
 .clearfox::after {
   content: "";
   display: block;
@@ -640,196 +645,261 @@ td, th {
   z-index: 1;
 }
 
-.login_container {
-  width: 1090px;
+.cart_container {
+  width: 985px;
   margin: 0 auto;
 }
 
-.header_mian {
-  background: #fff;
-  position: relative;
-  z-index: 300;
-  height: 95px;
-}
-
-.header_mian .sotelogo {
-  width: 300px;
-  height: 45px;
-  position: absolute;
-  top: 21px;
-  overflow: hidden;
-}
-
-.header_mian .sotelogo a {
-  text-decoration: none;
-  color: #3e3e3e;
-}
-
-.header_mian .sotelogo img {
-  float: left;
-  border: none;
-}
-
-#login_box .login-page-wrap {
-  margin-top: 40px;
-  overflow: hidden;
-  background: url("../images/login.png") no-repeat 0 center;
-}
-
-#login_box .login-page-wrap .loginup-article {
-  width: 420px;
-  margin-right: 68px;
-  box-shadow: 0 0 5px #e1e1e1, 0 0 15px #e1e1e1;
-  padding: 35px;
-  box-sizing: border-box;
-}
-
-#login_box .login-page-wrap .loginup-article .login-title {
-  margin-bottom: 10px;
-}
-
-#login_box .login-page-wrap .loginup-article .login-title .login-title-text {
-  font-family: 'Microsoft Yahei';
-  color: #5a5d6c;
-  font-weight: normal;
-  font-size: 21px;
-}
-
-#login_box .login-page-wrap .loginup-article .login-title .login-title-text .descrip {
+.taxfree-tip {
+  height: 30px;
+  background-color: #ffab2e;
+  color: #fff;
+  padding-left: 14px;
+  line-height: 30px;
   font-size: 12px;
 }
 
-#login_box .login-page-wrap .loginup-article .login-title .login-title-text .descrip a {
-  margin-left: 3px;
-  margin-right: 3px;
-  color: #ec3e7d;
+.carttitle {
+  margin: 20px 0 0px;
+  height: 38px;
+  font-size: 34px;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox {
-  margin-top: 40px;
+.cart-body {
+  background: #f2f2f2;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox a {
-  margin-left: 3px;
-  margin-right: 3px;
-  text-decoration: none;
-  color: #3e3e3e;
-}
-
-#login_box .login-page-wrap .loginup-article .loginupbox form input {
-  vertical-align: middle;
-  outline: none;
-  line-height: 21px;
-  height: 21px;
-}
-
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item {
-  height: 51px;
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-label {
-  width: 145px;
-  display: none;
-  height: 32px;
+.cart_goods {
   overflow: hidden;
-  height: 32px;
-  overflow: hidden;
-  text-align: right;
+  background-color: #fff;
+  background-color: transparent;
+}
+
+.cart_goods li {
+  text-align: center;
   float: left;
-  width: 5.2em;
-  line-height: 2.1em;
-  min-height: 1em;
-  font-size: 13px;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-label .warn {
-  color: #ef4521;
+.cart_goods a {
+  color: #666666;
+  vertical-align: middle;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act {
-  display: block;
-  _display: inline;
-  line-height: 2.5em;
-  position: relative;
-  font-size: 13px;
+.cart_goods .red {
+  color: #db3f7e;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act input[type=checkbox], #login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act input[type=radio] {
+.cart_goods input[type=checkbox], .cart_goods input[type=radio] {
   height: 13px;
   width: 20px;
   box-shadow: none;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act label {
-  margin-left: 5px;
-  margin-right: 15px;
-  vertical-align: middle;
+.cart_goods label {
+  cursor: default;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act .x-input {
-  height: 26px;
-  line-height: 26px;
-  padding: 4px;
-  width: 340px;
+.cart_goods .cart_goods {
+  background: fff;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act .verify-input {
-  width: 120px;
-}
-
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act .auto-change-verify-handle {
-  cursor: pointer;
-  width: 80px;
-  height: 36px;
-}
-
-#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .password-check {
-  width: 22px;
+.cart_goods .cart_goods_header {
+  background: #fff;
   overflow: hidden;
+}
+
+.cart_goods .cart_goods_header li {
+  font-weight: 400;
+  color: #666666;
+  font-size: 14px;
+  line-height: 20px;
+  height: 20px;
+  width: 100px;
+}
+
+.cart_goods .cart_goods_header .carttable-li1 {
+  width: 201px;
+  position: relative;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.cart_goods .cart_goods_header .carttable-li1 input {
+  vertical-align: 0;
+}
+
+.cart_goods .cart_goods_header .carttable-li2 {
+  width: 376px;
+  text-align: left;
+}
+
+.cart_goods ul.cart_allgoods {
+  background: #fff;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.cart_goods ul.cart_allgoods .carttable-td1 {
+  padding-top: 0;
+  text-align: left;
+  width: 211px;
+}
+
+.cart_goods ul.cart_allgoods .carttable-td1 input {
+  margin-left: 10px;
+}
+
+.cart_goods ul.cart_allgoods .cart-pimg {
   display: inline-block;
-  vertical-align: middle;
-  line-height: 40px;
-  visibility: hidden;
-  position: absolute;
-  right: 15px;
-  top: 0;
+  width: 100px;
+  height: 100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul .action-need-verify a.btn-caution span {
-  border-color: transparent;
+.cart_goods ul.cart_allgoods .carttable-td2 {
+  width: 376px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: left;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul a.auto-change-verify-handle {
-  width: 50px;
-  line-height: 18px;
-  color: #666;
+.cart_goods ul.cart_allgoods .carttable-td2 .carttable-spec {
+  padding-top: 10px;
+  color: #b2b2b2;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul .btn span {
-  background-color: #ee407f;
-  display: inline-block;
-  height: 100%;
-  line-height: 35px;
-  font-size: inherit;
-  padding-left: 30px;
+.cart_goods ul.cart_allgoods .carttable-td2 .active_name {
+  background: #be9a5e;
+  padding: 1px 5px;
   color: #fff;
+  font-style: normal;
+  display: inline-block;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul .btn span span {
+.cart_goods ul.cart_allgoods .cart_goods-price {
+  width: 100px;
+  text-align: center;
+}
+
+.cart_goods ul.cart_allgoods .buy_goods_qty {
+  width: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  float: left;
+  width: 100px;
+}
+
+.cart_goods ul.cart_allgoods .p-quantity {
+  width: 74px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.cart_goods ul.cart_allgoods .p-quantity a {
+  float: left;
+  width: 20px;
+  height: 21px;
+  overflow: hidden;
+  background: #f4f6f5;
+  text-align: center;
+  font: 14px/22px simsun,serif;
+}
+
+.cart_goods ul.cart_allgoods .p-quantity input {
+  float: left;
+  width: 30px;
+  height: 19px;
+  line-height: 19px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #e9e9e9;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.cart_goods ul.cart_allgoods .subtotal {
+  width: 100px;
+}
+
+.cart_goods ul.cart_allgoods .btnDelete {
+  width: 100px;
+  padding-right: 20px;
+}
+
+.cart_goods ul.cart_allgoods .btnDelete .carttable-action {
+  color: #b2b2b;
+}
+
+.cart_goods .cart-product {
+  clear: float;
+}
+
+.cart_goods .cart-foot {
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.cart_goods .cart-foot .blank_white {
+  position: relative;
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.cart_goods .cart-foot .cart_footer_r {
+  width: 200px;
+}
+
+.cart_goods .cart-foot td {
+  line-height: 40px;
+  text-align: center;
+}
+
+.cart_goods .cart-foot .cartfooter_check {
+  padding-left: 30px;
+  background-color: #fff;
+  width: 100%;
+  table-layout: fixed;
+  position: relative;
+}
+
+.cart_goods .cart-foot .cartfooter_check .cartfoot-link {
+  color: #565d67;
+}
+
+.cart_goods .cart-foot .cartfooter_check .clear_cart {
+  margin-left: 20px;
+}
+
+.cart_goods .cart-foot .cartfooter_check .cartfoot-label {
+  padding-right: 35px;
+}
+
+.cart_goods .cart-foot .cartfooter_check .cart-total {
+  vertical-align: -1px;
+}
+
+.cart_goods .cart-foot .cartfooter_check button {
+  vertical-align: top;
+  font-size: 133.33333%;
   border: 0 none;
   background-color: transparent;
-  padding-right: 30px;
-  padding-left: 0;
+  padding: 0;
 }
 
-#login_box .login-page-wrap .loginup-article .loginupbox form ul .btn-big, #login_box .login-page-wrap .loginup-article .loginupbox form ul .passport-btn .btn-caution {
-  display: block;
-  width: 100%;
+.cart_goods .cart-foot .cartfooter_check button span {
   background: #ec3e7d;
+  height: 40px;
   line-height: 40px;
-  color: #fff;
+  border-radius: 0;
   font-size: 16px;
-  border: 0;
+  border-color: transparent;
+  color: #fff;
+  display: block;
+  padding: 0 50px;
+  text-align: center;
 }

@@ -47,3 +47,17 @@ address, em, i {
 .fr {
   float: right;
 }
+
+.fl {
+  float: left;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  display: table-cell;
+  vertical-align: inherit;
+}

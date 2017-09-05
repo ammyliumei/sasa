@@ -1,0 +1,228 @@
+@import "var";
+@import "common";
+@import "load";
+// 导航条部分，自动影藏部分
+.list_nav .nav_category .container .all_category{
+        .all_category_title_box{display:none;}
+        &:hover{
+            .all_category_title_box{display:block;}
+        }                  
+}
+//
+.infoconts {
+    height: 82px;
+    overflow: hidden;
+}
+.tags {
+    height: 22px;
+} 
+//
+.temaibanner{
+   margin-top:-4px;
+    margin:  auto 30px auto;
+    overflow: hidden;
+    
+}
+.vip_header_img{
+
+    position:relative;
+    a.temailink{
+        text-align:center; display:inline-block;width: 100%;height: 45px;position:absolute;
+            left: 0px;bottom:20px;
+        span{
+            background-color: #fff;
+            padding:5px 30px;
+            display:inline-block;
+        }
+    }
+} 
+ // 楼梯     // 
+.rabit {
+    width: 170px;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    right: 35px;
+    overflow: hidden;
+    z-index: 100;
+    a{text-decoration: none;display: block;line-height: 0; }
+    img{
+        border:none;
+    }
+}
+// 内容
+.vip_main{
+    overflow:hidden;
+    background-color:$mainBackgroundGrey;
+    a{color: #3e3e3e;}
+    .vip_floor_cont{
+        display:block;
+        margin:0 auto;
+        width: 1090px;
+        img.img_vip2{margin-bottom:20px;}
+            // 每个楼层的内容ul
+        .floor_cont {
+            width: 1150px;
+            padding: 5px 0 30px 0;
+            margin-left: -26px;
+            float: left;
+                // 每个产品
+            li{
+                position: relative;
+                z-index: -1000;
+                width: 253px;
+                height: 485px;
+                float: left;
+                margin: 0 0 25px 26px;
+                .formall{
+                    width: 253px;
+                    height: 482px;
+                    background: #fff;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    .icountry {
+                        width: 21px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 6px;
+                         img {
+                            max-width: 22px;
+                            max-height: 22px;
+                            margin: 0;
+                        }
+                    }
+                    .formalpic {
+                        width: 85px;
+                        height: 253px;
+                        position: absolute;
+                        right: 0;
+                        display: none;
+                        dl.formalpic_list{
+                            position: absolute;
+                            top: 5px;
+                            dd {
+                                color: #98999b;
+                                img{
+                                    width: 76px;
+                                    height: 76px;
+                                    border: 4px solid #fff;
+                                    cursor: pointer;
+                                } 
+                                &:hover{img{border: 4px solid #c69a62;}}    
+                            }
+                            dd.active{
+                                outline: 0 none;
+                                img{border: 4px solid #c69a62;} 
+                            }
+                        }
+                    }
+                    .formallcont{
+                        .arrivals-pic {
+                            position: relative;
+                            width: 253px;
+                            height: 253px;
+                            overflow: hidden;
+                            b,  dl {
+                                position: absolute;
+                                top: 5px;
+                            }
+                            .arrivals-pic dl {
+                                right: 5px;
+                            }
+                            img {
+                                width: auto;
+                                height: 253px;
+                                display: block;
+                            }
+                        }
+                        .sale-price {
+                            border-bottom: 1px solid #eee;
+                            border-top: 1px solid #eee;
+                            padding: 10px 15px;
+                            color: #858587;
+                            .count {
+                                color: #c69a62;
+                                margin-top: 2px;
+                            }
+                            .price {
+                                font-size: 24px;
+                                margin-right: 10px;
+                            }
+                        }
+                        .arrivals-info {
+                            padding: 12px 15px;
+                            overflow: hidden;
+                            .des02 {
+                                height: 20px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                padding: 0;
+                                line-height: 20px;
+                                font-size: 13px;
+                                text-overflow: ellipsis;
+                                font-weight: bold;
+                            }
+                            .des03 {
+                                overflow: hidden;
+                                line-height: 20px;
+                                font-size: 13px;
+                                height: 40px;
+                            }
+                            .tags{
+                               a {
+                                    background: #c69a62;
+                                    display: inline-block;
+                                    float: left;
+                                    margin-right: 5px;
+                                    font-size: 12px;
+                                    padding: 0 5px;
+                                    color: #fff;
+                                    border-radius: 3px;
+                                    margin-bottom: 4px;
+                                } 
+                            }    
+                        }
+                        .btn-buy{
+                                padding: 10px 15px;
+                                display: none;
+                                a.btn-major {
+                                    display: block;
+                                    text-align: center;
+                                    span{
+                                        padding: 2px 0px;
+                                        width: 224px;
+                                        text-align: center;
+                                        span{
+                                            background: #ec3e7d;
+                                            color:#fff;
+                                            display: inline-block;
+                                            height: 100%;
+                                            line-height: 35px;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                }
+                &:hover{
+                    .formall{
+                        box-shadow: 4px 4px 20px rgba(0,0,0,.2);
+                        width: 338px;
+                        height: 520px;
+                        position: absolute;
+                        z-index: 100000;
+                        .formalpic{
+                              display: block;
+                        }
+                        .btn-buy{
+                         display:block;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+}
+

@@ -183,9 +183,13 @@
 }
 
 /*导航条*/
+.nav_category {
+  overflow: hidden;
+  height: 38px;
+}
+
 .nav_category .all_category {
   float: left;
-  height: 36px;
   color: #fff;
   position: relative;
 }
@@ -198,8 +202,8 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   padding-left: 50px;
-  height: 36px;
-  line-height: 36px;
+  height: 38px;
+  line-height: 38px;
   cursor: auto;
   background-color: #333;
 }

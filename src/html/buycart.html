@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="/css/buycart.css" />
+</head>
+<body>
+    <div class="cart_head_link"></div>
+    <div id="main" class="cart-body">
+        <!-- 购物车开始 -->   
+        <div class="cart_container">
+            <div class="taxfree-tip">
+                保税仓直送商品结帐提示 1. 保税仓直送商品不可与香港直送商品同时结帐; 2. 保税仓直送商品每张订单总金额不可超过 ¥2000。
+            </div>
+            <div class="carttitle bticon">您的购物车中的商品</div>
+            <!-- 购物车主体 -->
+            <div class="cart_goods">
+                    <!-- 表头 -->
+                    <ul class="cart_goods_header">
+                        <li class="carttable-li1"><input id="HKDepotCheckbox" name="is_bonded" type="checkbox" value="false" class=""><label for="HKDepotCheckbox">香港直送</label></li>
+                        <li class="carttable-li2">商品名称</li>
+                        <li >单价</li>
+                        <li >数量</li>
+                        <li >小计</li>
+                    </ul>
+                         
+                    <!-- 表体 -->
+                    <ul class="cart_allgoods">
+                        <!-- js生成产品信息 -->
+                        <li class="cart-product">
+                          <!-- 1....商品选项、图片-->
+                            <div class="carttable-td1 fl">
+                                <!-- 1.1选项 -->
+                                <input class="select-goods-normal fl" type="checkbox" name="selectcb">
+                                <!-- 1.2...图片 -->
+                                <div class="cart-pimg fl">
+                                  <a href="" target="_blank">
+                                    <img src="" alt="Bioisland DHA海藻油">
+                                  </a>
+                                </div>
+                            </div>
+                            <!-- 2...... 产品信息-->
+                            <div class="carttable-td2 fl">
+                                <!-- 2.1产品名称 -->
+                                <div>
+                                  <a href="#" target="_blank">
+                                    Bioisland DHA海藻油</a>
+                                </div>
+                                <!-- 2.2产品规格 -->
+                                <div class="carttable-spec">60粒&nbsp;</div>
+                                <!-- 2.3商品活动名称 -->
+                                <div class="active_name"></div>
+                            </div>
+                            <!--  3.....产品价格-->
+                            <div class="cart_goods-price fl">￥149.0</div>
+                            <!-- 4.......产品数量 -->
+                            <div class="buy_goods_qty">
+                                <span class="p-quantity">
+                                    <!--减  -->
+                                    <a href="javascript:;" class="btn-decrease">-</a>
+                                    <input type="text" name="modify_quantity[goods_25247_24836][quantity]" value="1">
+                                    <!-- 加 -->
+                                    <a href="javascript:;" class="btn-increase">+</a>
+                                </span>
+                            </div>
+                            
+                            <!-- 5....产品合计 -->
+                            <div class="subtotal red fl">￥149.0</div>
+                            <!-- 6.....删除 -->
+                            <div class="btnDelete fl"><a href="#" class="carttable-action">删除</a></div>
+                        </li>  
+                    </ul>
+                    <!-- 结账 -->
+                    <div class="cart-foot">
+                        <div  class="cartfooter_check" colspan="100">
+                            <!-- 继续购物 -->
+                            <div class="fl cart_footer_r">
+                                <a href="./" class="cartfoot-link">继续购物</a>
+                                <a href="javascript:;" id="J_actionClean" class="cartfoot-link clear_cart">清空购物车</a>
+                            </div>
+                            <!-- 结算 -->
+                            <div class="fr">
+                                <!-- 商品总数量 -->
+                                <span class="cartfoot-label">共 <span class="red items-quantity">1</span> 件商品</span>
+                                <!-- 商品总金额 -->
+                                <span class="cartfoot-label">商品应付金额
+                                    <strong class="red cart-total">¥149.0</strong>
+                                </span>
+                                <!-- 结账按钮 -->
+                                <button type="submit" class="btn btn-import btn-huge action-settle" rel="_request"><span>结账</span></button>             
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"></footer> 
+    <script src="/lib/jquery-3.2.1.js"></script>  
+    <script type="text/javascript" src="/js/buycart.js"></script>
+    <script type="text/javascript" src="/js/load.js"></script> 
+
+</body>
+</html>
