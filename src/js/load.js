@@ -1,6 +1,5 @@
 
-jQuery(function($){
-	     
+jQuery(function($){    
 	console.log('load.js链接成功')
 	$.ajax({
 		url:'/api/goodskind.php',
@@ -8,7 +7,6 @@ jQuery(function($){
 		async:true,
 		success:function(data){
 			var kinddata=$.parseJSON(data).data;
-	
 			$('.all_category_title_box li').each(function(idx,item1){
 
 				// 每个li种类的题目
@@ -19,8 +17,7 @@ jQuery(function($){
 				var $itemText=$item.find('a').text();
 				// console.log($itemText)
 				// 获取对应的数据
-				 
-		
+
 				var appendArr = kinddata.filter(function(item2){	
 					if($itemText==item2.categroyname){
 						return true;
@@ -65,7 +62,7 @@ jQuery(function($){
 						}
 					})
 					goodstype=new Set(goodstype);
-					console.log(goodstype)
+					// console.log(goodstype)
 					goodstype.forEach(function(item){
 						var $goodlink=$('<a></a>');
 						$goodlink.attr('href','goodslist.html');
@@ -75,26 +72,19 @@ jQuery(function($){
 						$goodskind.append($goodlink);
 					})
 					
-						
-
-
-					
-
-
-			
-					
 				})
-				
-				
-				
-
-
-
 			})
-			
 		}
 	})
-	// console.log($('.all_category_title_box'))
-
-	
+	// 侧边栏动画
+	console.log($('.sidebar-box'));
+	$('.siderar-box').bind({
+		mouseenter:function(){
+			$(this).find('.cont').css('display','block');
+			console.log(this);
+		},
+		mouleave:function(){
+			$(this).find('.cont').css('display','none');
+		}
+	});
 }) 

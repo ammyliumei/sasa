@@ -253,7 +253,6 @@ td, th {
 
 /*导航条*/
 .nav_category {
-  overflow: hidden;
   height: 38px;
 }
 

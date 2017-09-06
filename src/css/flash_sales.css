@@ -253,7 +253,6 @@ td, th {
 
 /*导航条*/
 .nav_category {
-  overflow: hidden;
   height: 38px;
 }
 
@@ -653,6 +652,11 @@ td, th {
   display: block;
 }
 
+#limmit {
+  background: #f2f2f2;
+  padding-top: 20px;
+}
+
 .limitted_offer .limitted_offer_title {
   background: url("../images/limitted_offer.png") no-repeat;
 }
@@ -819,6 +823,7 @@ td, th {
   line-height: 23px;
   height: 23px;
   font-size: 13px;
+  text-decoration: line-through;
 }
 
 .limitted_offer .limitted_offer_cont a .sasa_limit_item .sasa_limit_info .sasa_limit_bottom {

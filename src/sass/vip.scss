@@ -69,11 +69,11 @@
                 // 每个产品
             li{
                 position: relative;
-                z-index: -1000;
+
                 width: 253px;
                 height: 485px;
                 float: left;
-                margin: 0 0 25px 26px;
+                margin:0 26px 26px 0;
                 .formall{
                     width: 253px;
                     height: 482px;
@@ -131,7 +131,7 @@
                                 right: 5px;
                             }
                             img {
-                                width: auto;
+                                width: 253px;
                                 height: 253px;
                                 display: block;
                             }
@@ -209,7 +209,7 @@
                 &:hover{
                     .formall{
                         box-shadow: 4px 4px 20px rgba(0,0,0,.2);
-                        width: 338px;
+                       
                         height: 520px;
                         position: absolute;
                         z-index: 100000;

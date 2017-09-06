@@ -1,6 +1,21 @@
+require(['config'],function(){
+    require(['jquery'],function($){ 
+        $(function($){
+            console.log('login.js链接成功')
+            $('.header').load('./load.html .header_box');
+            $('.list_nav').load('./load.html .nav_category',function(){
 
+                console.log($('.nav all_category_title_box'))
+                $('.nav all_category_title_box').css('display','none');
+            });
+            $('.footer').load('./load.html .footer_box');
+            $('.siderbar').load('./load.html .sidebar-box');
+            require(['load'],function(){
+            })
 
-
+       })
+    })
+});
 
 
 

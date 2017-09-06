@@ -1,13 +1,14 @@
 /* 
 * @Author: Marte
-* @Date:   2017-09-05 17:04:26
+* @Date:   2017-09-06 23:19:11
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-06 23:04:42
+* @Last Modified time: 2017-09-06 23:20:10
 */
+
 require(['config'],function(){
-    require(['jquery'],function($){
+    require(['jquery'],function($){ 
         $(function($){
-            console.log('goodsdetails.js链接成功')
+             console.log('register.js链接成功')
             $('.header').load('./load.html .header_box');
             $('.list_nav').load('./load.html .nav_category',function(){
 
@@ -17,7 +18,7 @@ require(['config'],function(){
             $('.footer').load('./load.html .footer_box');
             $('.siderbar').load('./load.html .sidebar-box');
             require(['load'],function(){
-            }) 
-        })
+            })
+       })
     })
-})
+});

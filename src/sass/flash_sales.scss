@@ -9,8 +9,13 @@
         }        
             
 } 
+#limmit{
+    background:$mainBackgroundGrey;
+    padding-top:20px;
+}
 // 限时抢购
     .limitted_offer{
+
         .limitted_offer_title{background:url('../images/limitted_offer.png')no-repeat;}
         .title_img {
             width: 1200px;
@@ -28,6 +33,7 @@
         }
         // 限购的所有产品盒子
         .limitted_offer_cont{
+
             a{
                 .sasa_limit_item{
                     width: 1200px;
@@ -142,7 +148,7 @@
                                         float: left;
                                         margin-top: -4px;
                                     }
-                                    .sasa_limit_price_cur_num {
+                                    .sasa_limit_price_cur_num { 
                                         font-size: 32px;
                                         font-family: "Arial";
                                         line-height: 30px;
@@ -157,6 +163,7 @@
                                     line-height: 23px;
                                     height: 23px;
                                     font-size: 13px;
+                                    text-decoration:line-through;
 
                                 }
                             }
