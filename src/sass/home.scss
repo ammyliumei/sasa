@@ -616,11 +616,11 @@
 	
 	// 楼梯
 	.floor_location{
-		position: absolute;
+		position: fixed;
 	    left: 36.5px;
 	    top: 40px;
 	    z-index: 10;
-	    display: block;
+	    display: none;
 	    .flooricon {
 	    	li {
 			    padding: 5px;
@@ -628,7 +628,7 @@
 			    font-size: 11px;
 			    text-align: center;
 			    margin-bottom: 1px;
-			    &:hover{
+			    &.hover{
 			    	background:$mainColor;
     				color: #fff;
     				a{

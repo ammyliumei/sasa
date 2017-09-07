@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.clearfox::after {
+.clearfix::after {
   content: "";
   display: block;
   height: 0;
@@ -574,6 +574,31 @@ td, th {
   z-index: 9;
   padding: 5px;
   box-sizing: border-box;
+}
+
+.siderbar .sidebar-box .side_item .cont {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  right: 70px;
+  top: 0px;
+  width: 90px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #ddd;
+  background-color: #494949;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.siderbar .sidebar-box .side_item .arrow_right {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "\5b8b\4f53";
 }
 
 .siderbar .sidebar-box .side_item:hover {

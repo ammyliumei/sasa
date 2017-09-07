@@ -1,4 +1,4 @@
-.clearfox::after {
+.clearfix::after {
   content: "";
   display: block;
   height: 0;
