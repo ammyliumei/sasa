@@ -30,6 +30,22 @@
     }
 }
 #register_box{
+    .signupin-content{
+        .form-act {
+            position: relative;
+            overflow:hidden;
+        }
+        .notice-inline {
+               position: absolute;
+               top: 38px;
+               left: 0;
+               padding: 0;
+               height: 20px;
+               line-height: 20px;
+               white-space: nowrap;
+               font-size: 12px;
+        }
+    }
    
     .signin-page-wrap{
         overflow:hidden;
@@ -129,7 +145,12 @@
                                     width: 80px;
                                     height: 36px;
                                 }
+
                                 
+                            }
+                            .focus{
+                                border-color:#f9a0b4;
+                                box-shadow:0 0 5px #fbb4b0;
                             }
                             .password-check {
                                 width: 22px;
@@ -142,6 +163,9 @@
                                 right: 15px;
                                 top: 0;
                             }
+                            
+                        }
+                        li.form-item-license{
                             
                         }
                         .action-need-verify{

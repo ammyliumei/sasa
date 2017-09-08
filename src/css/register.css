@@ -63,6 +63,15 @@ td, th {
   vertical-align: inherit;
 }
 
+.focus {
+  border-color: #f9a0b4;
+  box-shadow: 0 0 5px #fbb4b0;
+}
+
+.error {
+  color: #666666;
+}
+
 /*枚红色*/
 /*字体深灰色*/
 /*背景浅灰色*/
@@ -694,6 +703,22 @@ td, th {
   border: none;
 }
 
+#register_box .signupin-content .form-act {
+  position: relative;
+  overflow: hidden;
+}
+
+#register_box .signupin-content .notice-inline {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  padding: 0;
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
 #register_box .signin-page-wrap {
   overflow: hidden;
   margin-top: 40px;
@@ -807,6 +832,11 @@ td, th {
   cursor: pointer;
   width: 80px;
   height: 36px;
+}
+
+#register_box .signin-page-wrap .signup-article .signupbox form ul li.form-item .focus {
+  border-color: #f9a0b4;
+  box-shadow: 0 0 5px #fbb4b0;
 }
 
 #register_box .signin-page-wrap .signup-article .signupbox form ul li.form-item .password-check {

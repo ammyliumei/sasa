@@ -35,7 +35,7 @@
             </div>
             <!-- 注册盒子 -->
             <div class="loginupbox">
-              <form action="/passport-create.html" method="post">
+              <form  method="post">
                 <input name="forward" type="hidden" value="">
                 <input name="mini" type="hidden" value="">
                 <ul>
@@ -43,7 +43,7 @@
                   <li class="form-item">
                     <label for="" class="form-label"><em class="warn">*</em>邮箱/手机：</label>
                     <span class="form-act">
-                      <input class="x-input action-account-check J_uname" type="text" name="pam_account[login_name]" id="dom_el_aace760" placeholder="邮箱/手机号" vtype="required" >
+                      <input class="x-input action-account-check username" type="text" name="pam_account[login_name]" id="dom_el_aace760" placeholder="邮箱/手机号" vtype="required" >
                       <span class="validation-messagebox"></span>
                       </span>
                   </li>
@@ -57,10 +57,13 @@
                   <li class="form-item action-verifycode">
                     <label for="" class="form-label"><em class="warn">*</em>验证码：</label>
                     <span class="form-act">
-                      <input class="x-input verify-input img_input" type="text" name="loginupverifycode" placeholder="填写验证码" > 
-                      <span class="verify-code auto-change-verify-handle"> 
-                        <a href="/index-gen_vcode-loginVCODE-4.html" class="verify-code auto-change-verify-handle lnklike">看不清?换一张</a>      
-                     </span>
+                      <input class="x-input verify-input img_input" type="text" name="loginupverifycode" placeholder="填写验证码" >
+                      <span class="verify-code"></span>
+                      <span class="auto-change-verify-handle"> 
+                       
+                        <a class="verify-code auto-change-verify-handle lnklike">看不清?换一张</a>      
+                      </span>
+                    </span>
                   </li>
                   <li class="form-item">
                     <label for="" class="form-label"></label>
@@ -75,9 +78,9 @@
                   <li class="form-item-normal">
                     <label for="" class="form-label"></label>
                     <span class="form-act">
-                      <button type="submit" class="btn btn-major btn-big" rel="_request">
+                      <span type="submit" class="btn btn-major btn-big login_btn">
                         <span><span>登陆</span></span>
-                      </button>      
+                      </span>      
                     </span>
                   </li>
                 </ul>

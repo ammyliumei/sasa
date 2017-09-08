@@ -1,4 +1,4 @@
-@import "var";
+
 @import "common";
 @import "load";
 // 导航条部分，自动影藏部分
@@ -124,6 +124,7 @@ a{color: #3e3e3e;}
                         border: none;
                 }
             }
+
             .product-album-zoom {
                 position: absolute;
                 bottom: 0;
@@ -729,10 +730,11 @@ a{color: #3e3e3e;}
 
 // 放大镜
 /*原本图片盒子*/
-.album-preview-container{position:relative;}
+.album-preview-container{position:relative;display: inline-block;
+    line-height: 100%;img{width:300px;height:300px;}}
 /*可移动放大镜，相对于图片盒子定位*/
-.album-preview-container .minzoom{display:block;position: absolute;width:30px;height:30px;border:1px solid #fc0;background-color:#ff0;background-color: rgba(255,255,0,.3);filter:alpha(Opacity=30);z-index:1000;}
+.album-preview-container .album-zooms-handle{display:block;position: absolute;width:30px;height:30px;border:1px solid #fc0;background-color: #b3d5ff;opacity: 0.5;filter:alpha(Opacity=50);z-index:2000;}
 /*接收放大效果的图片的盒子，定位于body*/
-.ammyzoom-big{display:none;position: absolute;overflow:hidden;}
+.big_img_cont{display:none;position: absolute;overflow:hidden;z-index:30000;}
 /*详图 相对于盒子定位*/
-.ammyzoom-big img{position: absolute;left:0;right:0;}
+.big_img_cont img{position: absolute;left:0;right:0;}

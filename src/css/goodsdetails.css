@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/*枚红色*/
-/*字体深灰色*/
-/*背景浅灰色*/
-/*公告背景中等灰色*/
-/*white*/
 .clearfix::after {
   content: "";
   display: block;
@@ -66,6 +61,15 @@ table {
 td, th {
   display: table-cell;
   vertical-align: inherit;
+}
+
+.focus {
+  border-color: #f9a0b4;
+  box-shadow: 0 0 5px #fbb4b0;
+}
+
+.error {
+  color: #666666;
 }
 
 /*枚红色*/
@@ -1488,30 +1492,38 @@ a {
 /*原本图片盒子*/
 .album-preview-container {
   position: relative;
+  display: inline-block;
+  line-height: 100%;
+}
+
+.album-preview-container img {
+  width: 300px;
+  height: 300px;
 }
 
 /*可移动放大镜，相对于图片盒子定位*/
-.album-preview-container .minzoom {
+.album-preview-container .album-zooms-handle {
   display: block;
   position: absolute;
   width: 30px;
   height: 30px;
   border: 1px solid #fc0;
-  background-color: #ff0;
-  background-color: rgba(255, 255, 0, 0.3);
-  filter: alpha(Opacity=30);
-  z-index: 1000;
+  background-color: #b3d5ff;
+  opacity: 0.5;
+  filter: alpha(Opacity=50);
+  z-index: 2000;
 }
 
 /*接收放大效果的图片的盒子，定位于body*/
-.ammyzoom-big {
+.big_img_cont {
   display: none;
   position: absolute;
   overflow: hidden;
+  z-index: 30000;
 }
 
 /*详图 相对于盒子定位*/
-.ammyzoom-big img {
+.big_img_cont img {
   position: absolute;
   left: 0;
   right: 0;

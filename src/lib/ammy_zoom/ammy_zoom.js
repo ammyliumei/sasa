@@ -10,7 +10,7 @@ function AmmyZoom(option){
 		// 放大图于原图之间的间隙
 		gap:15,
 		// 放大镜的类选择器
-		ele:'.originalbox'
+		ele:'.album-preview-container'
 
 	}
 	// 将传入的属性跟默认属性综合成一个对象

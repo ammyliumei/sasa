@@ -63,6 +63,15 @@ td, th {
   vertical-align: inherit;
 }
 
+.focus {
+  border-color: #f9a0b4;
+  box-shadow: 0 0 5px #fbb4b0;
+}
+
+.error {
+  color: #666666;
+}
+
 /*枚红色*/
 /*字体深灰色*/
 /*背景浅灰色*/
@@ -770,6 +779,11 @@ td, th {
 
 #login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-label .warn {
   color: #ef4521;
+}
+
+#login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .focus {
+  border-color: #f9a0b4;
+  box-shadow: 0 0 5px #fbb4b0;
 }
 
 #login_box .login-page-wrap .loginup-article .loginupbox form ul li.form-item .form-act {
