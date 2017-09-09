@@ -15,7 +15,7 @@
 				$(this).find('.cont').animate({'right':70,'opacity':0},500);
 				setTimeout(function(){
 					$(this).find('.cont').css('display','none');
-				},500)
+				},500);
 			}
 		});
 	}
@@ -146,14 +146,12 @@
 	                                                    </div>
 	                                                </div>
 	                                            </div>
-
 	                                            <div class="sasa_limit_bottom">
 	                                              <div class="sasa_limit_sold">已售<span class="sasa_limit_soldnum">${item.goodssaleqty}</span>件</div>
-	                                              <span class="sasa_limit_btn">马上抢</span>
+	                                              <span class="sasa_limit_btn jumpbox">马上抢</span>
 	                                            </div> 
 	                                        </div>
-	                                    </div> `;     
-	                                                 
+	                                    </div> `;                   
 	                $thisGoods.html(simgWrapperCont); 
 	                var timerSele=$(`#timer${item.goodsid}`)
 	                // console.log(timerSele)
@@ -238,7 +236,7 @@
 							                </div>
 							            </div>
 						                <div class="sasa_new_intro">
-						                    <a href="" target="_blank"> &nbsp;${item.goodsname}&nbsp; #${item.goodspecification}&nbsp;#${item.goodssaleqty}件&nbsp;${item.goodsname}&nbsp;</a>
+						                    <a href="/html/goodsdetails.html?id=${item.goodsid}" target="_blank"> &nbsp;${item.goodsname}&nbsp; #${item.goodspecification}&nbsp;#${item.goodssaleqty}件&nbsp;${item.goodsname}&nbsp;</a>
 						                </div>
 						                <div class="sasa_new_price">
 						                    <span class="sasa_new_price_cur_sign">￥</span>
@@ -311,7 +309,7 @@
 		                                            </div>
 		                                            <div class="btn-buy">
 		                                                <a href="/html/goodsdetails.html?id=${item.goodsid}" class="btn btn-major action-addtocart" target="_dialog_minicart" rel="nofollow">
-		                                                    <span><span>加入购物车</span></span>
+		                                                    <span><span class="jumpbox">加入购物车</span></span>
 		                                                </a>
 		                                            </div>
 		                                        </div>
@@ -482,19 +480,23 @@
          date.setDate(date.getDate()+7);
          return date;
 	}
+
+
+
 	// 验证是否存有保留了登陆信息
+	if(Cookie.get('user')){
+		$('#loginBar_right').css('display','none');
+		$('#memberBar_right').css('display','block');
+	}else{
+		$('#loginBar_right').css('display','block');
+		$('#memberBar_right').css('display','none');
+	}
 
-		if(Cookie.get('user')){
-			$('#loginBar_right').css('display','none');
-			$('#memberBar_right').css('display','block');
 
-		}else{
-			$('#loginBar_right').css('display','block');
-			$('#memberBar_right').css('display','none');
-		}
-		$('#memberBar_right a').click(function(){
-			Cookie.remove('user')
-		})
+	// 退出点击后清除cookie
+	$('#memberBar_right a').click(function(){
+		Cookie.remove('user')
+	})
 		// currentUrl();
 		// function currentUrl(){
 		// 	var currenturl=location.href;
@@ -507,3 +509,85 @@
 			// 	Cookie.set('recordurl',currenturl, expires(),'/');
 			// }
 		// }
+	
+
+
+
+	// 给马上抢购物车 绑定弹窗事件
+	// 自动居中弹窗
+	function autoCenter(ele){
+		// 计算left,top
+		// console.log(window.innerWidth,window.innerHeight)
+		var left = (window.innerWidth - 300)/2;
+		var top = (window.innerHeight - 150)/2;
+		// console.log(left,top)
+		// 居中定位
+		$(ele).css({'left':left+'px','top':top+'px'});
+	}
+	// 关闭串口函数
+	function eleDele(ele){
+
+		$(ele).detach();
+
+	} 
+	function addPopup(eleClassName){
+		$('body').append(`<div id="mini_cart_dialog" class=${eleClassName} >
+					  	<div class="popup-body">
+	
+					     	<div class="popup-header clearfix">
+					        	<span>提醒</span>
+					        	<span><button type="button" title="关闭" class="popup-btn-close fr" hidefocus=""><i>×</i></button>
+					        	</span>
+					    	</div>
+
+					    	<div class="popup-content clearfix">
+					    		<div class="minicart-infos">
+
+					  				<p><q class="icon">%</q><span class="caution-content">加入购物车成功。</span></p>
+
+									<div class="actions">
+							    		<button type="button" class="btn btn-simple popup-btn-close">
+							    			<span><span>继续购物</span></span>
+							    		</button>    
+							    		<a class="btn btn-major" href="/html/buycart"><span><span>进入购物车</span></span></a>
+									</div>
+								</div>
+							</div>
+					 	 </div>
+					</div>`);
+	}
+	//点击ele 点击事件加入购物车
+		
+	
+	function addBuycart(ele,goodsid ,goodsname,goodsprice,goodsgg,goodsqty,imgurl){
+		// 2得到用户购物车需要的信息
+		var buyername =Cookie.get('user');
+		var goodsid = goodsid ;
+		var goodsname = goodsname;
+		var goodsprice = goodsprice;
+		var goodsgg =  goodsgg;
+		var goodsqty =  goodsqty;
+		var imgurl = imgurl;
+		console.log(goodsqty, goodsgg,goodsprice)
+		$.ajax({
+		    url:'/api/buycart.php',
+		    type:'get',
+		    data:{'buyername':buyername,
+		    		'goodsid':goodsid,
+		    		'goodsname':goodsname,
+		    		'goodsprice':goodsprice,
+		    		'goodsgg':goodsgg,
+		    		'goodsqty':goodsqty,
+		    		'imgurl':imgurl
+		    	},
+		    async:true,
+		    success:function(data){
+		    	console.log(666)
+		      	console.log(data)
+		    }
+		})
+	}		
+	function getGoodId(){
+		
+	}
+

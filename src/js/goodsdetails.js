@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-05 17:04:26
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-08 13:58:41
+* @Last Modified time: 2017-09-09 21:00:11
 */
 require(['config'],function(){
     require(['jquery'],function($){
@@ -21,9 +21,10 @@ require(['config'],function(){
                     var idArr=i.split('=');
                      if(idArr[0]=='id'){
                         // console.log(idArr[1]);
-                        goodsid=idArr[1];
+                       goodsid = idArr[1];
                      }
                 }) ;
+                    // console.log(goodsid)
                 // 3.根据商品id请求数据      
                 $.ajax({
                     url:'/api/goodsinfo.php',
@@ -31,17 +32,39 @@ require(['config'],function(){
                     data:{'cate':goodsid},
                     async:true,
                     success:function(data){
+                        // console.log(data)
                         var kinddata=$.parseJSON(data).data[0];
-                        console.log(kinddata)
+                        console.log(kinddata);
                          // 5.生成数据
                          // 大图片
                          // console.log(data.goodsimgurl)
                          
                         var imgArr=kinddata.goodsimgurl.split(';')
-                        $('.album-preview-container img').attr({'src':imgArr[0]});
-                        // 详图盒子
+                       
+                        var goodsid = kinddata.goodsid ;
+                        var goodsname = kinddata.goodsname;
+                        var goodsprice = (kinddata.goodsprice*kinddata.goodsdiscount*0.1).toFixed(2);
+                        var goodsgg =  kinddata.goodspecification;
+                        var goodsqty = $('.action-quantity-input').val();
+                        var ele ='.jumpbox';
+                        var imgurl = imgArr[0];
+                         $('.jumpbox').on('click',function(){
+                            addBuycart(ele,goodsid ,goodsname,goodsprice,goodsgg,goodsqty,imgurl);
+                            console.log(this);
+                            addPopup('popup-container')
+                            autoCenter('#mini_cart_dialog');
+                                // 1改变窗口大小事件
+                            window.onresize = function(){autoCenter('#mini_cart_dialog');}  
+                            window.scroll = function(){autoCenter('#mini_cart_dialog');}
+                            $('.popup-btn-close').click(function(){eleDele('.popup-container');}); 
+                            console.log(goodsid) 
+                            
+                         })
+                         $('.album-preview-container img').attr({'src':imgArr[0]});
+                        
+                         // 详图盒子
                         imgArr.forEach(function(item){
-                        console.log(item)
+                        // console.log(item)
                              $('.thumbnail-list ul').append(`
                                                 <li>
                                                 <div class="arrow arrow-top"><i class="below"></i></div>
@@ -53,14 +76,14 @@ require(['config'],function(){
                                             </li>`);
                         })
                         // 标题
-                        $('.product-titles').append(`<i class="icon iconfont"></i>${kinddata.goodsname}`)
+                        $('.product-titles').append(`<i class="icon iconfont"></i>${goodsname}`)
                         // 品牌
                          $('.product-titles2 a').html(`${kinddata.brand}&nbsp;`)
                          // 规格
-                         $('product—titles3').html(`${kinddata.goodsname}&nbsp;${kinddata.goodspecification}`)
+                         $('product—titles3').html(`${goodsgg}&nbsp;`)
 
                          // 现价价格
-                         $('.action-price').html(`￥${(kinddata.goodsprice*kinddata.goodsdiscount*0.1).toFixed(2)}`);
+                         $('.action-price').html(`￥${goodsprice}`);
                          // 旧的价格
                          $('.action-mktprice').html(`￥${kinddata.goodsprice}`);
                         
@@ -112,7 +135,7 @@ require(['config'],function(){
                                     }else if(left > $smallImg.width() - $zoom.width()){
                                         left = $smallImg.width()- $zoom.width();
                                     };
-                                    console.log(e.clientY, $smallCont.offset().top,$zoom.height()/2,top);
+                                    // console.log(e.clientY, $smallCont.offset().top,$zoom.height()/2,top);
                                 if(top<0){
                                     top = 0;
                                 }else if(top > $smallImg.height() - $zoom.height()){
@@ -144,7 +167,7 @@ require(['config'],function(){
                             };
                     }
                 });
-                // 4.吸顶楼梯
+                    // 4.吸顶楼梯
                 $(window).on('scroll',function(){
                     var scrollTop = $(window).scrollTop();
                     // console.log(scrollTop,$('.product-tags ').offset().top)

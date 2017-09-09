@@ -49,3 +49,58 @@ td, th {
 .error {
     color: #666666;
 }
+
+
+
+.popup-container {
+    position: fixed;
+    z-index: 100001;
+    background-color: white;
+    box-shadow: 2px 2px 1px rgba(150,150,150,0.5);
+    width: 300px;
+    box-shadow: 2px 2px 3px #dddddd;
+    // 头部
+    .popup-header {
+        background-color: #efefef;
+        height: 35px;
+        padding: 0 10px;
+        .popup-btn-close i {
+            line-height: 1;
+            display: inline-block;
+        }
+    }   
+    // 内容
+    .minicart-infos {
+        padding: 10px;
+        line-height: 2;
+        text-align: center;
+        p {
+               margin-bottom: 20px;
+        }
+        a.btn {
+            display: inline-block;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+        .btn span {
+            background-color: #ee407f;
+            display: inline-block;
+            height: 100%;
+            line-height: 35px;
+            font-size: inherit;
+            padding-left: 30px;
+            color: #fff;
+            span {
+                border: 0 none;
+                background-color: transparent;
+                padding-right: 30px;
+                padding-left: 0;
+            }
+        }
+    }
+    
+}
+
+
+
+

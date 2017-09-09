@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 21:48:13
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-07 12:01:35
+* @Last Modified time: 2017-09-09 20:03:06
 */
 require(['config'],function(){
     require(['jquery'],function($){ 
@@ -22,7 +22,7 @@ require(['config'],function(){
                 floor('.floor_location','.main_li')
                  // 数据请求
                 fourActive(20,'.this_week');
-               floor('.zk_floor','.vip_floor_cont .floor_cont')
+                floor('.zk_floor','.vip_floor_cont .floor_cont')
             })        
         })
     })

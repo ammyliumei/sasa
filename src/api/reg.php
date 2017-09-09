@@ -22,19 +22,27 @@
 	if($result->num_rows>0){
 		echo "flase";
 	}else{
-		// 密码md5加密
-		$password = md5($password);
+		echo "true";
+		// // 密码md5加密
+		if($password){
+			$tablename = $username.'table';
 
+			$password = md5($password);
+			$sql = "insert into userinformation (username,password) values('$username','$password')";
+			
+				
+			// 获取查询结果
+			$result = $conn->query($sql);
 
-		$sql = "insert into userinformation (username,password) values('$username','$password')";
-		// 获取查询结果
-		$result = $conn->query($sql);
+			if ($result ) {
+			    echo "插入数据成功，并建表成功";
+			} else {
+			    echo "Error: " . $sql . "<br>" . $conn->error;
+			}
 
-		if ($result) {
-		    echo "插入数据成功";
-		} else {
-		    echo "Error: " . $sql . "<br>" . $conn->error;
 		}
+		
+		
 	}
 
 	

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css">
+
     <link rel="stylesheet" type="text/css" href="/css/buycart.css" />
 </head>
 <body>
     <div class="cart_head_link">
-        <img src="../images/buycart/buycart_header.jpg" height="103" width="1165" alt="" />
+        <img src="/images/buycart/buycart_header.jpg" height="103" width="1165" alt="" />
     </div>
     <div id="main" class="cart-body">
         <!-- 购物车开始 -->   
@@ -15,7 +17,7 @@
             <div class="taxfree-tip">
                 保税仓直送商品结帐提示 1. 保税仓直送商品不可与香港直送商品同时结帐; 2. 保税仓直送商品每张订单总金额不可超过 ¥2000。
             </div>
-            <div class="carttitle bticon">您的购物车中的商品</div>
+            <div class="carttitle">您的购物车中的商品</div>
             <!-- 购物车主体 -->
             <div class="cart_goods">
                     <!-- 表头 -->
@@ -38,7 +40,7 @@
                                 <!-- 1.2...图片 -->
                                 <div class="cart-pimg fl">
                                   <a href="" target="_blank">
-                                    <img src="" alt="Bioisland DHA海藻油">
+                                    <img class="cartgoodsimg" src="" alt="Bioisland DHA海藻油">
                                   </a>
                                 </div>
                             </div>
@@ -78,7 +80,7 @@
                         <div  class="cartfooter_check" colspan="100">
                             <!-- 继续购物 -->
                             <div class="fl cart_footer_r">
-                                <a href="./" class="cartfoot-link">继续购物</a>
+                                <a href="/" class="cartfoot-link">继续购物</a>
                                 <a href="javascript:;" id="J_actionClean" class="cartfoot-link clear_cart">清空购物车</a>
                             </div>
                             <!-- 结算 -->
@@ -96,6 +98,31 @@
                     </div>
             </div>
         </div>
+    </div>
+    <div class="small-page">
+            <div class="cart-empty" style="position: relative;">
+                 <div class="cart-emptytext">亲，您的购物车中没有商品。</div>
+                 <div class="cart-emptytext2">赶紧挑选心爱的商品吧！</div>
+                 <div class="search clearfix">
+                   <form action="/" method="post" class="SearchBar" id="searchbar_cart" async="false">
+                        <div class="search-input">
+                            <input type="text" name="search_keywords" placeholder="保湿" autocompleter="associate_autocomplete_goods:name,goods_id" ac_options="{}" class="key" value="" autocomplete="off">
+                        </div>
+                        <button type="submit" class="btn btn-search submit-btn">搜索</button>
+                    </form>
+                    <div class="hot-keywords">
+                        <!--<span class="red">:</span>-->
+                        <a href="">兰蔻</a>
+                        <a href="">滋润</a>
+                        <a href="">小样</a>
+                        <a href="">碧柔</a>
+                        <a href="">肌肤之钥</a>
+                        <a href="">面膜</a>
+                        <a href="">迪奥</a>
+                    </div>
+                  </div>
+                 <a href="/" class="backhome" style="margin-top: 80px;">返回首页</a>
+            </div>
     </div>
     <footer class="footer"></footer>
 
