@@ -1,6 +1,7 @@
 
 @import "common";
 @import "load";
+
 // 导航条部分，自动影藏部分
 .list_nav .nav_category .container .all_category{
         .all_category_title_box{display:none;}
@@ -53,7 +54,7 @@ a{color: #3e3e3e;}
     .zijt {
         width: 20px;
         height: 19px;
-        background: url(/themes/default/images/tips.png) no-repeat -360px -405px;
+        
         display: block;
         position: absolute;
         left: 40px;
@@ -105,7 +106,7 @@ a{color: #3e3e3e;}
             .icon-over3 {
                 width: 230px;
                 height: 230px;
-                background: url(/themes/default/images/tips.png) 0 -1130px;
+                
                 position: absolute;
                 top: 30px;
                 left: 140px;
@@ -120,7 +121,11 @@ a{color: #3e3e3e;}
                 font-family: Arial;
                 margin: 0 auto;
                 width:300px;height:300px;
+                a{position:relative;
+                    display:block;width: 300px;height:300px;}
                 img{
+                    width:300px;
+                    height:300px;
                         border: none;
                 }
             }
@@ -170,17 +175,21 @@ a{color: #3e3e3e;}
             left: 0;
         }
         .thumbnail-list{
-            margin: 0 26px;
+            margin-left:50px;
             padding-top: 5px;
             overflow: hidden;
-            width: 450px;
+            width: 460px;
             height: 105px;
+            position:relative;
+            .small_img_box {
+                position:absolute;
+            }
             li {
                 margin: 0 5px 0 0;
                 float: left;
                 img{
-                    max-width: 60px;
-                    max-height: 60px;
+                   width:100px;
+                    max-height:100px;
                     vertical-align: middle;
                     border:none;
                 }
@@ -192,19 +201,16 @@ a{color: #3e3e3e;}
         .flip {
             position: absolute;
             top: 0;
-            margin-top: 5px;
-            width: 16px;
+            width: 10px;
             height: 105px;
             line-height: 64px;
             text-align: center;
             border-radius: 8px;
-            a {
-                color: #e5cbb2;
-                font-size: 28px;
-                margin-left: -1px;
-                display: block;
-                margin-top: 15px;
-            }
+            color: #e5cbb2;
+            font-size: 28px;
+            
+            display: block;
+            margin-top: 15px;
 
         }
         .over a {

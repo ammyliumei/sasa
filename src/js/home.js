@@ -68,8 +68,7 @@ require(['config'],function(){
 				limmitedGoods(4);
 				 // 获取新品数据
 				fourgoods(10,'.new_arrival_cont')
-				// 2.侧边栏
-				siderbar($('.side_item'));
+				
 				// 楼梯
 				floor('.floor_location','.main_li')
 				

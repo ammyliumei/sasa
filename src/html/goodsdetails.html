@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>商品详情页</title>
-        <link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css">
-
-        <link rel="stylesheet" type="text/css" href="../css/goodsdetails.css" />
+        <link rel="stylesheet" type="text/css" href="/iconfont/iconfont.css">
+        <link rel="stylesheet" type="text/css" href="/lib/ammy_zoom/ammy_zoom.css" />
+        <link rel="stylesheet" type="text/css" href="/lib/lxzoom/css/lxzoom.css" />
+        <link rel="stylesheet" type="text/css" href="/css/goodsdetails.css" />
     </head>
     <body >
         <header class="header"></header>
@@ -56,10 +57,7 @@
                                               <img src="" class="small-pic" style="max-width:300px;max-height:300px;">
                                             <div class="album-zooms-handle"></div>
                                           </a>
-
-                                        </div>
-                                         
-                                        
+                                        </div>   
                                     </div>
                                 </div>
                                 <!-- 2.1.2.3产品产地 -->
@@ -69,12 +67,12 @@
                                 <!-- 2.1.2.4小轮播图 -->
                                 <div class="product-album-thumb product-album-thumb-bottom">
                                     <!-- 左边箭头 -->
-                                    <div class="flip prev forward over">
-                                        <a href="javascript:void(0);" class="icon">4</a>
-                                    </div>
+                                    <span class="flip prev forward over iconfont icon-triangle">
+                                        
+                                    </span>
                                     <!-- 详图列表 -->
                                     <div class="thumbnail-list">
-                                        <ul class="clearfix" style="width: 542px;">
+                                        <ul class="small_img_box clearfix" style="width: 542px;">
                                         <!-- js生成 -->
                                             <!-- <li class="active">
                                                 <div class="arrow arrow-top"><i class="below"></i></div>
@@ -82,21 +80,14 @@
                                                 <img src="" alt="防晒隔离霜SPF50+ [脸部、身体用]　" width="60" height="60"/> 
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div class="arrow arrow-top"><i class="below"></i></div>
-                                                <div class="thumbnail">
-                                                    <a href="">
-                                                        <img src="" alt="防晒隔离霜SPF50+ [脸部、身体用]　" width="60" height="60">
-                                                    </a>
-                                                </div>
-                                            </li> -->
+                                            -->
 
                                         </ul>
                                     </div>
                                     <!-- 右边箭头 -->
-                                    <div class="flip next backward ">
-                                        <a href="javascript:void(0);" class="icon">5</a>
-                                    </div>
+                                    <span class="flip next backward iconfont  icon-sanjiaoxing-copy">
+                                        
+                                    </span>
                                 </div>
                             </div>
                             <!-- 2.1.3右边 -->
@@ -398,8 +389,5 @@
         <footer class="footer"></footer> 
         <script type="text/javascript" src="/js/require.js" data-main="/js/goodsdetails.js"></script>
 
-        <!-- <script src="../lib/jquery-3.2.1.js"></script>  
-        <script type="text/javascript" src="../js/goodsdetails.js"></script>
-        <script type="text/javascript" src="../js/load.js"></script>  -->
     </body>
 </html>

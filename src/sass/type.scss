@@ -1,0 +1,239 @@
+@import "var";
+@import "common";
+@import "load";
+.container{width: 1090px;margin:0 atuo;padding:30px;}
+.type_left {
+    margin:20px 0  0 30px;
+    
+    width: 253px;
+     background:$White;
+ .append_div{overflow:hidden;}
+    .kindname a{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+       
+     
+    }
+    .kindnametitle{
+        
+        border-top: 1px dotted #f2f2f2;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-left:34px;
+        color: #565d67;
+        overflow: hidden;
+        line-height:24px;
+        &&:hover{
+            background: #e8e6e7;
+        }
+    }
+    
+}
+ul li{
+        margin: 0;
+    padding: 0;
+}
+
+.type_page {
+    background:#f2f2f2;
+}
+.type_right{
+    width: 730px;
+    padding:20px 0 20px 20px;
+    
+    li {
+        position: relative;
+        width: 253px;
+        height: 485px;
+        float: left;
+        margin: 0 35px 26px 0;
+    }
+    .formall{
+        width: 253px;
+        height: 482px;
+       background: #e8e6e7;
+        position: absolute;
+        left: 0;
+        top: 0;
+        .icountry {
+            width: 21px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+             img {
+                max-width: 22px;
+                max-height: 22px;
+                margin: 0;
+            }
+        }
+
+        .formalpic {
+            width: 85px;
+            height: 253px;
+            position: absolute;
+            right: 0;
+            display: none;
+            dl.formalpic_list{
+                position: absolute;
+                top: 5px;
+                dd {
+                    color: #98999b;
+                    img{
+                        width: 76px;
+                        height: 76px;
+                        border: 4px solid #fff;
+                        cursor: pointer;
+                    } 
+                    &:hover{img{border: 4px solid #c69a62;}}    
+                }
+                dd.active{
+                    outline: 0 none;
+                    img{border: 4px solid #c69a62;} 
+                }
+            }
+        }
+        .formallcont{
+            .arrivals-pic {
+                position: relative;
+                width: 253px;
+                height: 253px;
+                overflow: hidden;
+                b,  dl {
+                    position: absolute;
+                    top: 5px;
+                }
+                .arrivals-pic dl {
+                    right: 5px;
+                }
+                img {
+                    width: 253px;
+                    height: 253px;
+                    display: block;
+                }
+            }
+            .sale-price {
+                border-bottom: 1px solid #eee;
+                border-top: 1px solid #eee;
+                padding: 10px 15px;
+                color: #858587;
+                .count {
+                    color: #c69a62;
+                    margin-top: 2px;
+                }
+                .price {
+                    font-size: 24px;
+                    margin-right: 10px;
+                }
+            }
+            .arrivals-info {
+                padding: 12px 15px;
+                overflow: hidden;
+                .des02 {
+                    height: 20px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    padding: 0;
+                    line-height: 20px;
+                    font-size: 13px;
+                    text-overflow: ellipsis;
+                    font-weight: bold;
+                }
+                .des03 {
+                    overflow: hidden;
+                    line-height: 20px;
+                    font-size: 13px;
+                    height: 40px;
+                }
+                .tags{
+                   a {
+                        background: #c69a62;
+                        display: inline-block;
+                        float: left;
+                        margin-right: 5px;
+                        font-size: 12px;
+                        padding: 0 5px;
+                        color: #fff;
+                        border-radius: 3px;
+                        margin-bottom: 4px;
+                    } 
+                }    
+            }
+            .btn-buy{
+                    padding: 10px 15px;
+                    display: none;
+                    a.btn-major {
+                        display: block;
+                        text-align: center;
+                        span{
+                            padding: 2px 0px;
+                            width: 224px;
+                            text-align: center;
+                            span{
+                                background: #ec3e7d;
+                                color:#fff;
+                                display: inline-block;
+                                height: 100%;
+                                line-height: 35px;
+                                color: #fff;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}           
+.new_detail_type_name{
+    display:inline-block;
+    width: 100px;
+    height: 20px;
+    line-height:20px;
+    margin:10px 10px;
+}
+.detail_type{
+    background-color: #fff;
+}
+.gallery-sortbar {
+    height: 30px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    background-color: #fff;
+    .gallery-sort {
+        float: left;
+        span {
+            display: inline-block;
+            color: #666666;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 5px;
+        }
+        a {
+            cursor: pointer;
+            border-right: 1px solid #f1f1f1;
+            float: left;
+            position: relative;
+            display: inline-block;
+                color: #666666;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 5px;
+        }
+        em {
+            padding: 0 15px 0 20px;
+            display: inline-block;
+            line-height: 30px;
+        }
+    }
+    .mini-pageview {
+        float: right;
+        margin-right: 16px;
+        padding-top: 6px;
+    }
+    .gallery-sorttext {
+        padding-left: 25px;
+        border-right: 1px solid #f1f1f1;
+        padding-right: 25px;
+        display: inline-block;
+        float: left;
+    }
+}
+               

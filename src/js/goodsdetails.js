@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-05 17:04:26
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-09 21:00:11
+* @Last Modified time: 2017-09-10 19:16:39
 */
 require(['config'],function(){
     require(['jquery'],function($){
@@ -48,9 +48,10 @@ require(['config'],function(){
                         var goodsqty = $('.action-quantity-input').val();
                         var ele ='.jumpbox';
                         var imgurl = imgArr[0];
+                     // console.log(ele,goodsid ,goodsname,goodsprice,goodsgg,goodsqty,imgurl);
                          $('.jumpbox').on('click',function(){
                             addBuycart(ele,goodsid ,goodsname,goodsprice,goodsgg,goodsqty,imgurl);
-                            console.log(this);
+                           
                             addPopup('popup-container')
                             autoCenter('#mini_cart_dialog');
                                 // 1改变窗口大小事件
@@ -69,7 +70,7 @@ require(['config'],function(){
                                                 <li>
                                                 <div class="arrow arrow-top"><i class="below"></i></div>
                                                 <div class="thumbnail">
-                                                    <a href="">
+                                                    <a >
                                                         <img src="${item}" alt="${kinddata.goodsname}" width="60" height="60">
                                                     </a>
                                                 </div>
@@ -88,84 +89,103 @@ require(['config'],function(){
                          $('.action-mktprice').html(`￥${kinddata.goodsprice}`);
                         
 
-                            // 6。放大镜
-                            // 生成大图片及大容器
-                            var $bigCont = $('<div class="big_img_cont"></div>');
-                            $bigCont.css({'width':'400px','height':'300px','border':'1px solid #cccccc'});
-                            var  $bigImg=$('<img class="big_img"/>');
-                            var $smallImg=$('.album-preview-container img');
+                    // 6。放大镜
+                        // 生成大图片及大容器
+                        var $bigCont = $('<div class="big_img_cont"></div>');
+                        $bigCont.css({'width':'400px','height':'300px','border':'1px solid #cccccc'});
+                        var  $bigImg=$('<img class="big_img"/>');
+                        var $smallImg=$('.album-preview-container img');
+                        
+
+                        $bigImg.css({'width':'600px','height':'600px'});
+                        $bigCont.append($bigImg);
+                        $('body').append($bigCont);
+                         $smallImg.change(function(){
+                            var left = $smallCont.offset().left + smallImg.offsetWidth + 10;
+                            var  top = $smallCont.offset().top;
+                            bigContainer.css({'left ':left,'top':top});
+                            console.log(left)
+                        })
+
+                        var $smallCont=$('.album-preview-container');
+                        // 放大镜显示隐藏（半透明） 
+                       
+                        var $zoom=$('.album-zooms-handle');
+                        // 计算放大比例  
+                        var ratio=$bigImg.width()/$smallImg.width();
+                        $smallCont.mouseenter(function(){
                             $bigImg.attr('src',$smallImg.attr('src'));
+                            show();
+                            // 放大镜移动的x,y
+                        });
+                        $smallCont.mouseleave(function(){
+                            hide();
+                        });
+                        // 放大镜移动
+                        $smallCont.mousemove(function(e){
+                            var left_x = $smallCont.offset().left + $smallImg.width() + 10;
+                            var  top_x = $smallCont.offset().top;
 
-                            $bigImg.css({'width':'600px','height':'600px'});
-                            $bigCont.append($bigImg);
-                            $('body').append($bigCont);
-                             $smallImg.change(function(){
-                                var left = $smallCont.offset().left + smallImg.offsetWidth + 10;
-                                var  top = $smallCont.offset().top;
-                                bigContainer.css({'left ':left,'top':top});
-                                console.log(left)
-                            })
-
-                            var $smallCont=$('.album-preview-container');
-                            // 放大镜显示隐藏（半透明） 
+                            $bigCont.css({'left':left_x,'top':top_x});
                            
-                            var $zoom=$('.album-zooms-handle');
-                            // 计算放大比例  
-                            var ratio=$bigImg.width()/$smallImg.width();
-                            $smallCont.mouseenter(function(){
-                                
-                                show();
-                                // 放大镜移动的x,y
-                            });
-                            $smallCont.mouseleave(function(){
-                                hide();
-                            });
-                            // 放大镜移动
-                            $smallCont.mousemove(function(e){
-                                var left_x = $smallCont.offset().left + $smallImg.width() + 10;
-                                var  top_x = $smallCont.offset().top;
-
-                                $bigCont.css({'left':left_x,'top':top_x});
-                               
-                               
-                                var left =  e.clientX- $smallCont.offset().left - $zoom.width()/2 ;
-                                var top = e.clientY - $zoom.height()/2 ;
-                                 if(left<0){
-                                        left = 0;
-                                    }else if(left > $smallImg.width() - $zoom.width()){
-                                        left = $smallImg.width()- $zoom.width();
-                                    };
-                                    // console.log(e.clientY, $smallCont.offset().top,$zoom.height()/2,top);
-                                if(top<0){
-                                    top = 0;
-                                }else if(top > $smallImg.height() - $zoom.height()){
-                                    top = $smallImg.height() - $zoom.height()
+                           
+                            var left =  e.clientX- $smallCont.offset().left - $zoom.width()/2 ;
+                            var top = e.clientY - $zoom.height()/2 ;
+                             if(left<0){
+                                    left = 0;
+                                }else if(left > $smallImg.width() - $zoom.width()){
+                                    left = $smallImg.width()- $zoom.width();
                                 };
-                               setPosition(left,top);
-                            });       
-                            // 放大镜的移动
-                            // 2.显示（只有在显示的时候才能获取元素的宽度）
-                            function show(){
-                                $bigCont.css('display','block');
-                                $zoom.css('display','block');
-                                // 根据比例得出在原图中放大镜显示区域的大小
-                                $zoom.css('width',$bigCont.width()/ratio + 'px');
-                                $zoom.css('height',$bigCont.height()/ratio + 'px');
+                                // console.log(e.clientY, $smallCont.offset().top,$zoom.height()/2,top);
+                            if(top<0){
+                                top = 0;
+                            }else if(top > $smallImg.height() - $zoom.height()){
+                                top = $smallImg.height() - $zoom.height()
                             };
-                            // 3.隐藏
-                            function hide(){
-                                $bigCont.css('display','none');
-                                $zoom.css('display','none');
-                            };
-                            function setPosition(x,y){
+                           setPosition(left,top);
+                        });       
+                        // 放大镜的移动
+                        // 2.显示（只有在显示的时候才能获取元素的宽度）
+                        function show(){
+                            $bigCont.css('display','block');
+                            $zoom.css('display','block');
+                            // 根据比例得出在原图中放大镜显示区域的大小
+                            $zoom.css('width',$bigCont.width()/ratio + 'px');
+                            $zoom.css('height',$bigCont.height()/ratio + 'px');
+                        };
+                        // 3.隐藏
+                        function hide(){
+                            $bigCont.css('display','none');
+                            $zoom.css('display','none');
+                        };
+                        function setPosition(x,y){
 
-                                // 放大镜移动
-                                $zoom.css('left', x + 'px');
-                                $zoom.css('top', y + 'px');
-                                // 放大后的图片在容器中的移动
-                                $bigImg.css({'left':`${-x*ratio}px`,'top':`${-y*ratio}px`})
-                            };
+                            // 放大镜移动
+                            $zoom.css('left', x + 'px');
+                            $zoom.css('top', y + 'px');
+                            // 放大后的图片在容器中的移动
+                            $bigImg.css({'left':`${-x*ratio}px`,'top':`${-y*ratio}px`})
+                        };
+                    //7.小图切换 
+                        $('.prev').click(function(){
+                             $('.small_img_box').animate({'left': 0},500);
+                            console.log(111);
+                        });
+                        $('.next').click(function(){
+                            // $('.small_img_box').css('vv');
+                            var removeWidth = $('.small_img_box').width()-$('.thumbnail-list').width();
+                            $('.small_img_box').animate({'left':-removeWidth},500);
+                            console.log(removeWidth);
+
+                        })
+                        // 8.小图点击事件
+
+                        $('.small_img_box').on('click','li',function(){
+                            $('.album-preview-container .small-pic').attr('src',$(this).find('img').attr('src'));
+                        })
+
                     }
+                    
                 });
                     // 4.吸顶楼梯
                 $(window).on('scroll',function(){

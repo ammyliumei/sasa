@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>vip</title>
-    <link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="/iconfont/iconfont.css">
 
-    <link rel="stylesheet" type="text/css" href="../css/vip.css" />
+    <link rel="stylesheet" type="text/css" href="/css/vip.css" />
 </head>
 <body>
     <header class="header"></header>
@@ -19,13 +19,13 @@
         <!-- 楼梯 -->
     <div class="rabit" id="js_floor_div" style="display: block;"> 
         <div class="zk_floor">
-            <a ><img src="../images/vip/flloor_header.jpg" height="90" width="170"></a>
-            <li class="rabit_nav" group_id="1149"><img src="../images/vip/floor_thisweek.jpg" height="50" width="170"></li> 
-            <li  class="rabit_nav" ><img src="../images/vip/floor_3flash"></li>
-            <li  class="rabit_nav "><img src="../images/vip/floor_4flash"></li>
-            <li  class="rabit_nav "><img src="../images/vip/floor_5flash"></li>
-            <li  class="rabit_nav "><img src="../images/vip/floor_6flash"></li>
-            <li  class="rabit_nav "><img src="../images/vip/floor_7flash"></li>
+            <img src="../images/vip/flloor_header.jpg" height="90" width="170">
+            <a href="#floor1"><li class="rabit_nav" ><img src="../images/vip/floor_thisweek.jpg"></li></a>
+            <a href="#floor2"><li  class="rabit_nav" ><img src="../images/vip/floor_3flash"></li></a>
+            <a href="#floor3"><li  class="rabit_nav "><img src="../images/vip/floor_4flash"></li></a>
+            <a href="#floor4"><li  class="rabit_nav "><img src="../images/vip/floor_5flash"></li></a>
+            <a href="#floor5"><li  class="rabit_nav "><img src="../images/vip/floor_6flash"></li></a>
+            <a href="#floor6"><li  class="rabit_nav "><img src="../images/vip/floor_7flash"></li></a>
         </div>
         
     </div> 
@@ -37,7 +37,7 @@
                     <img src="../images/vip/vip2.jpg" height="410" width="1090" alt="" class="img_vip2"/>
                 </ul>  
                 <!-- 本周推荐 -->
-                <ul class="floor_cont this_week">
+                <ul class="floor_cont this_week " id="floor1">
                     <img src="../images/vip/vip3.jpg"/>
                      <!-- js生成结构 -->
                     <!-- <li> -->
@@ -107,34 +107,27 @@
                         </div> -->
                     <!-- </li> -->    
                 </ul>
-                <ul class="floor_cont flash3">
+                <ul class="floor_cont flash3" id="floor2">
                      <img src="../images/vip/flash3.jpg"/>
                 </ul>
-                <ul class="floor_cont flash4">
+                <ul class="floor_cont flash4" id="floor3">
                      <img src="../images/vip/flash4.jpg"/>
                 </ul>
-                <ul class="floor_cont flash5">
+                <ul class="floor_cont flash5" id="floor4">
                      <img src="../images/vip/flash5.jpg"/>
                 </ul>
-                <ul class="floor_cont flash6">
+                <ul class="floor_cont flash6" id="floor5">
                      <img src="../images/vip/flash6.jpg"/>
                 </ul>
-                <ul class="floor_cont flash7">
+                <ul class="floor_cont flash7" id="floor6">
                      <img src="../images/vip/flash7.jpg"/>
                 </ul>
         </div>
-        <!-- js生成 -->
+        
     </div>
     <div class="siderbar"></div>
     <footer class="footer"></footer>
     <script type="text/javascript" src="/js/require.js" data-main="/js/vip.js"></script>
-
-    <!-- <script src="../lib/jquery-3.2.1.js"></script>
-    <script type="text/javascript">  
-    </script>
-    <script type="text/javascript" src="../js/vip.js">
-    </script>   
-    <script type="text/javascript" src="../js/load.js"></script>  -->
     
 </body>
 </html>

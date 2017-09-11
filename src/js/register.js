@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-06 23:19:11
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-09 16:00:14
+* @Last Modified time: 2017-09-11 10:05:13
 */
 
 require(['config'],function(){
@@ -57,7 +57,6 @@ require(['config'],function(){
                                 }else{
                                      $('#userid').closest('.form-act').find('.exchange').css('display','none');
                                 }
-                                
                             }
                     })
                 });
@@ -105,8 +104,8 @@ require(['config'],function(){
                                                var date = new Date();
                                                date.setDate(date.getDate()+7);
                                                Cookie.set('user',username,date,'/');
-                                               localtion.href='/index.html';
-                                                // history.back();
+                                               // window.localtion.href='/index.html';
+                                                history.back();
                                                
                                             }
                                         })

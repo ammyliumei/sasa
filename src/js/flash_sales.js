@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 21:48:13
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-07 11:53:48
+* @Last Modified time: 2017-09-10 16:37:26
 */
 require(['config'],function(){
     // 引入jq
@@ -16,7 +16,7 @@ require(['config'],function(){
             $('.siderbar').load('./load.html .sidebar-box');
            // 引入公共js
             require(['common'],function(){
-                siderbar($('.side_item'));
+                
                  // 操作头部及当行
                 console.log($('.nav all_category_title_box'))
                 $('.nav all_category_title_box').css('display','none')

@@ -5,13 +5,21 @@
 $pageNo = isset($_GET['pageNo']) ? $_GET['pageNo'] : 1;
 $category = isset($_GET['category']) ? $_GET['category'] : 'facialcare';
 $qty = isset($_GET['qty']) ? $_GET['qty'] : "10";
+
 $cate = isset($_GET['cate']) ? $_GET['cate'] : '';
 
-// echo($category);
+
+$type = isset($_GET['type ']) ? $_GET['type '] : '';
 //编写sql语句
-//
-    $sql = "select  * from facialcare ";
-    $sql .="where active LIKE '%$cate' or active LIKE '$cate%'  LIMIT $qty";
+ $sql = "select  * from facialcare ";
+if($type){
+    $sql .="where $type LIKE '%$cate' or $type LIKE '$cate%'  ";
+   
+}else{
+    $sql .="where active LIKE '%$cate' or active LIKE '$cate%' ";
+}
+    $startIdx = $qty*($pageNo-1);
+    $sql .= " limit $startIdx,$qty";
     // var_dump($sql);
     //查询前设置编码，放置输出乱码
     $conn->set_charset('utf8');
