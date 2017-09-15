@@ -64,6 +64,8 @@ require(['config'],function(){
 				function stop(){
 					clearInterval(window.timer);
 				}
+				// 今日必看写入数据
+				
 				// 获取数据（限时抢购区域）并写入页面
 				limmitedGoods(4);
 				 // 获取新品数据

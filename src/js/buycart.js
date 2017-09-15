@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-05 19:08:12
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-11 14:37:28
+* @Last Modified time: 2017-09-14 20:20:51
 */
 require(['config'],function(){
     require(['jquery'],function($){
@@ -47,7 +47,7 @@ require(['config'],function(){
                                             <div class="carttable-spec">${item.goodsgg}&nbsp;</div>
                                             <div class="active_name"></div>
                                         </div>
-                                        <div class="cart_goods-price fl">￥${item.goodsprice}</div>
+                                        <div class="cart_goods-price fl">￥<span>${item.goodsprice}</span></div>
                                         <div class="buy_goods_qty">
                                             <span class="p-quantity">
                                                 <a class="btn-decrease">-</a>
@@ -55,7 +55,7 @@ require(['config'],function(){
                                                 <a  class="btn-increase">+</a>
                                             </span>
                                         </div>
-                                        <div class="subtotal red fl">￥${item.goodsprice*item.goodsqty}</div>
+                                        <div class="subtotal red fl">￥<span>${item.goodsprice*item.goodsqty}<span></div>
                                         <div class="btnDelete fl"><a href="#" class="carttable-action">删除</a></div>`;
                                         // console.log(goodsItem);
                                         cartItme.html(goodsItem);
@@ -69,19 +69,26 @@ require(['config'],function(){
                         }else{
                             $('#main').css('display','none').siblings('.small-page').css('display','block');
                         }
-                       
+                       // 点击增加按钮
                         $('.btn-increase').click(function(){
                             var currentQty = Number( $(this).siblings('input').val());
                             $(this).siblings('input').val(currentQty + 1);
+                            var currenttotal =(currentQty+1)*($(".cart_goods-price span").html());
+                            $('.subtotal span').html("￥"+currenttotal);
                         })
+                        // 点击减少按钮
                         $('.btn-decrease').click(function(){
                             var currentQty = Number( $(this).siblings('input').val());
                             if(currentQty<=1){
                                 $(this).siblings('input').val( 1);
+                                $('.subtotal span').html("￥"+$(".cart_goods-price span").html());
                             }else{
                                  $(this).siblings('input').val(currentQty - 1);
+                                var currenttotal =(currentQty-1)*($(".cart_goods-price span").html());
+                                $('.subtotal span').html("￥"+currenttotal);
                             }
                         });
+                        // 在数据改变商品数量函数
                         function changeCart(){
                             var buycartname =Cookie.get('user')+'table';
                             var goodsid = $(this).closest('.cart-product').attr('id');
@@ -94,12 +101,13 @@ require(['config'],function(){
                                         'goodsqty':goodsqty
                                     },
                                 async:true,
-                                success:function(data){console.log(data);
+                                success:function(data){
+                                    // console.log(data);
                                     getBuyCart()
                                 }
                             })
                         }
-
+                        // 输入框数据改变数量改变数据库
                        $('.buy_goods_qty input').change(function(){
                             var goodsqty =  $(this).val();
                             console.log(goodsqty);
@@ -124,6 +132,7 @@ require(['config'],function(){
                                 }
                             })
                         });
+                        // 点击加减时改变数据库商品数量
                         $('.p-quantity a').click(function(){
                             var goodsqty =  $(this).siblings('input').val();
                             console.log(goodsqty);
@@ -144,13 +153,14 @@ require(['config'],function(){
                                 }
                             })
                         }) ;   
-
+                        // 删除商品
                         $('.btnDelete').click(function(){
-                            console.log(666)
+                            
                             var goodsid = $(this).closest('.cart-product').attr('id');
                             var buycartname =Cookie.get('user')+'table';
                             var dele ='true';
-                            console.log(goodsid,buycartname,dele)
+                            // console.log(goodsid,buycartname,dele)
+                            var $this = $(this);
                             $.ajax({
                                 url:'/api/buycart.php',
                                 type:'get',
@@ -160,18 +170,20 @@ require(['config'],function(){
                                         'dele':dele
                                     },
                                 async:true,
-                                success:function(data){
-                                    console.log(data);
-                                    $(this).closest('.cart-product').remove();
+                                success:function(data1){
+                                    console.log(data1);
+                                    console.log($this);
+
+                                    $this.closest('.cart-product').remove();
                                     getBuyCart();
                                 }
                             })
                         })
+                        // 清除全部商品
                         $('.clear_cart').click(function(){
                             $(this).closest('.cart_goods').find('.cart_allgoods').remove();
                             $('#main').css('display','none');
                             $('.small-page').css('display','block');
-
                             var buycartname =Cookie.get('user')+'table';
                             var deleall =true;
                             $.ajax({
@@ -189,6 +201,7 @@ require(['config'],function(){
                                 }
                             })
                         })
+                        // 下面总价
 // 。。。。。。。。。。。。。。。。。。。不要超出
                 
                     }

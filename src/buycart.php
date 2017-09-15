@@ -17,21 +17,9 @@
     // 购物车改动
     $cartgoodsid = isset($_GET['cartgoodsid']) ? $_GET['cartgoodsid'] : '';
     // 删除购物车
-    $dele = isset($_GET['dele']) ? $_GET['dele'] : '';
+    $dele = isset($_GET['$dele']) ? $_GET['dele'] : '';
     $deleall = isset($_GET['$deleall']) ? $_GET['deleall']:'';
 
-    if($dele){
-          $sql = "DELETE FROM $buycartname where goodsid=$cartgoodsid";
-            // 获取查询结果
-          echo($sql);
-        $result = $conn->query($sql);
-        if ($result) {
-                echo "删除商品成功";
-                
-        } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    }
     // 1.传入购物车表名
     if($buycartname){
         // 1.1拿到所有购物车数据
@@ -68,7 +56,18 @@
                     }else{
                         // 1.1 删除一条数据
                       
-                        
+                        if($dele){
+                              $sql = "DELETE FROM $buycartname where id=$goodsid";
+                                // 获取查询结果
+                              echo($sql);
+                            $result = $conn->query($sql);
+                            if ($result ) {
+                                    echo "删除商品成功";
+                                    
+                            } else {
+                                    echo "Error: " . $sql . "<br>" . $conn->error;
+                            }
+                        }
                     }           
             }
             else if($deleall){

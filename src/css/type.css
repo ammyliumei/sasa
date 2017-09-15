@@ -897,7 +897,6 @@ a {
 
 .type_left {
   margin: 20px 0  0 30px;
-  padding: 20px 0 0 10px;
   width: 253px;
   background: #fff;
 }
@@ -909,11 +908,9 @@ a {
 .type_left .kindname a {
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #565d67;
 }
 
 .type_left .kindnametitle {
-  background: #e8e6e7;
   border-top: 1px dotted #f2f2f2;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -921,6 +918,10 @@ a {
   color: #565d67;
   overflow: hidden;
   line-height: 24px;
+}
+
+.type_left .kindnametitle:hover {
+  background: #e8e6e7;
 }
 
 ul li {

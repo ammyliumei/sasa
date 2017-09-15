@@ -330,19 +330,19 @@ function limmitedGoods(qty){
                     // console.log(nowDate)
                         // 计算差值:***
                     var timeDif=parseInt((activeDate-nowDate)/1000);
-                    if(timeDif<=0){
-                        clearInterval(this.timer);
-                        sele.style.display='none';
-                    }
+                    // if(timeDif<=0){
+                    //     clearInterval(this.timer);
+                    //     $(sele).css('display','none');
+                    // }
                     // 根据差值计算各个数值
                         // 秒
                     var seconds=timeDif%60;
                         // 分
                     var minutes=parseInt(timeDif/60)%60;
                         //小时
-                    var hours=parseInt(timeDif/60/60)%60;
+                    var hours=parseInt(timeDif/60/60)%24;
                         // 天
-                    var days=parseInt(timeDif/60/60/60);
+                    var days=parseInt(timeDif/60/60/30);
                         // 根据差值显示 
                     var totaltimes=`剩余<span class="day">${days}</span>天
                                     <span class="hour">${ hours}</span> : 
@@ -591,17 +591,17 @@ function floor(louti,louceng){
 		})
 	});
 	// 4）点击楼梯跳到对应楼层
-	// $louti.on('click','li',function(){	
-	// 	var targetScrollTop;
-	// 	if($(this).hasClass('last')){
-	// 		targetScrollTop = 0
-	// 	}else{
-	// 		var idx = $(this).index();
-	// 		// 获取对应楼层所在的偏移量
-	// 		targetScrollTop = $louceng.eq(idx).offset().top;
-	// 	}
-	// 	$('html,body').stop().animate({'scrollTop':targetScrollTop},'slow');
-	// })
+	$louti.on('click','li',function(){	
+		var targetScrollTop;
+		if($(this).hasClass('last')){
+			targetScrollTop = 0
+		}else{
+			var idx = $(this).index();
+			// 获取对应楼层所在的偏移量
+			targetScrollTop = $louceng.eq(idx).offset().top;
+		}
+		$('html,body').stop().animate({'scrollTop':targetScrollTop},'slow');
+	})
 }
 	// 10.验证码
 	/**
@@ -684,6 +684,7 @@ function addPopup(eleClassName){
 						</div>
 				 	 </div>
 				</div>`);
+
 }
 // 自动居中弹窗
 function autoCenter(ele){
@@ -721,6 +722,7 @@ function addBuycart(ele,goodsid ,goodsname,goodsprice,goodsgg,goodsqty,imgurl){
 	    success:function(data){
 	    	
 	      	console.log(data)
+            getBuyCart();
 	    }
 	})
 }		

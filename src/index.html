@@ -59,31 +59,30 @@
   <!-- 5................莎莎的承诺 -->
   <div class="sasa_promise_center"></div>
   <!-- 6.................主体内容部分 -->
-  <div id="main_content"> 
-   
+  <div id="main_content">  
     <!-- 4................楼梯 -->
     <div class="floor_location"  >
       <ul class="flooricon">
-        <li title="每日必看"><a href="#"><i class="iconfont">&#xe605;</i>必看</a></li>
-        <li title="限时特卖"><a href="#"><i class="iconfont">&#xe620;</i>特卖</a></li>
-        <li title="新品上市"><a href="#"><i class="iconfont">&#xe652;</i>新品</a></li>
-        <li title="销售排行榜"><a href="#"><i class="iconfont">&#xe626;</i>排行榜</a></li>
+        <li title="每日必看"><a href="#floor1"><i class="iconfont">&#xe605;</i>必看</a></li>
+        <li title="限时特卖"><a href="#floor2"><i class="iconfont">&#xe620;</i>特卖</a></li>
+        <li title="新品上市"><a href="#floor3"><i class="iconfont">&#xe652;</i>新品</a></li>
+        <li title="销售排行榜"><a href="#floor4"><i class="iconfont">&#xe626;</i>排行榜</a></li>
       </ul>
     </div>
 
     <div class="container">
       <div class="main_cont">
         <!-- 每日必看 -->
-        <div class="must_check main_li">
+        <div class="must_check main_li" id="#floor1">
           <!-- 标题 -->
           <div class="must_check_title title_img"></div>
-          <ul class="must_check_cont">
+          <ul class="must_check_cont" id="#floor1">
             <!-- 每一项内容链接 -->
-              <a target="_blank" href="" class="sasa_mustcheck_a">
+              <a target="_blank" href="/html/goodsdetails.html?id=108077102003" class="sasa_mustcheck_a" data-type="">
                 
                 <div class="sasa_mustcheck_item fr">
                   <!-- 左侧图片 -->
-                  <img class="sasa_mustcheck_img" src="images/mustcheck1.jpg" height="260" width="360">
+                  <img class="sasa_mustcheck_img" src="/images/mustcheck1.jpg" height="260" width="360">
                   <!-- 右侧介绍 -->
                   <div class="sasa_mustcheck_info">
                     <p class="sasa_mustcheck_title">碧柔防晒</p
@@ -93,13 +92,13 @@
                   </div>
                 </div>
               </a> 
-              <!--!每一项内容链接 、、、、、、、、、、、、、、、、、、、、、、、、、、、、 -->
+              <!--!每一项内容链接  -->
                
-              <a target="_blank" href="" class="sasa_mustcheck_a">
+              <a target="_blank" href="/html/goodsdetails.html?id=107135802001" class="sasa_mustcheck_a">
                 
                 <div class="sasa_mustcheck_item fr">
                   <!-- 左侧图片 -->
-                  <img class="sasa_mustcheck_img" src="images/mustcheck1.jpg" height="260" width="360">
+                  <img class="sasa_mustcheck_img" src="images/mustcheck2.jpg" height="260" width="360">
                   <!-- 右侧介绍 -->
                   <div class="sasa_mustcheck_info">
                     <p class="sasa_mustcheck_title">碧柔防晒</p
@@ -109,11 +108,11 @@
                   </div>
                 </div>
               </a>
-                <a target="_blank" href="" class="sasa_mustcheck_a">
+              <a target="_blank" href="/html/goodsdetails.html?id=108469213004" class="sasa_mustcheck_a">
                 
                 <div class="sasa_mustcheck_item fr">
                   <!-- 左侧图片 -->
-                  <img class="sasa_mustcheck_img" src="images/mustcheck1.jpg" height="260" width="360">
+                  <img class="sasa_mustcheck_img" src="images/mustcheck3.jpg" height="260" width="360">
                   <!-- 右侧介绍 -->
                   <div class="sasa_mustcheck_info">
                     <p class="sasa_mustcheck_title">碧柔防晒</p
@@ -123,15 +122,16 @@
                   </div>
                 </div>
               </a>
-               <a target="_blank" href="" class="sasa_mustcheck_a">
+              <a target="_blank" href="/html/goodsdetails.html?id=108469213004" class="sasa_mustcheck_a">
                 
                 <div class="sasa_mustcheck_item fr">
                   <!-- 左侧图片 -->
-                  <img class="sasa_mustcheck_img" src="images/mustcheck1.jpg" height="260" width="360">
+                  <img class="sasa_mustcheck_img" src="images/mustcheck4.jpg" height="260" width="360">
                   <!-- 右侧介绍 -->
                   <div class="sasa_mustcheck_info">
                     <p class="sasa_mustcheck_title">碧柔防晒</p
-                    ><p class="sasa_mustcheck_subtit">绝对清爽不留白</p>
+                    >
+                    <p class="sasa_mustcheck_subtit">绝对清爽不留白</p>
                     <p class="sasa_mustcheck_date">日本连续5年销量NO.1</p>
                     <span class="sasa_mustcheck_btn">立即疯抢</span>
                   </div>
@@ -140,7 +140,7 @@
           </ul>
         </div>
         <!--  限时抢购-->
-        <div class="limitted_offer main_li">
+        <div class="limitted_offer main_li" id="#floor2">
             <div class="limitted_offer_title title_img"> </div>
             <!-- 开抢时间 -->
             <div class="sasa_limit_subtit">每天09:00准时开抢</div>
@@ -153,7 +153,7 @@
            </div>
         </div>
         <!--  排名 -->
-        <div class="title_ranking main_li">
+        <div class="title_ranking main_li" id="#floor3">
           <div class="title_ranking_title title_img"> </div>
           <ul class="title_ranking_cont">
               <li class="sasa_rank_column">
@@ -161,17 +161,16 @@
                 <ul class="hd_goodstop goodstop">
                   <li class="sasa_rank_item">
                     <!-- 排行榜名次 -->
-
                       <div class="sasa_rank_icon "></div>
                         <!--左边图片  -->
-                      <a class="goodstop_imgsmall" href="product-20255.html" target="_blank">
+                      <a class="goodstop_imgsmall" href="/html/goodsdetails.html?id=108469213004" target="_blank">
                         <img class="sasa_rank_item_img" alt="肌源赋活修护精华霜" src="images/mustcheck2.jpg" height="80" width="80">
                       </a>
                         <!-- 右边详情 -->
                       <div class="sasa_rank_item_info">
                         <!-- 产品名称 -->
                         <div class="sasa_rank_item_name">
-                          <a href="product-20255.html">SK-II&nbsp;R.N.A. POWER&nbsp;肌源赋活修护精华霜&nbsp;2.5克</a>
+                          <a href="/html/goodsdetails.html?id=108469213004">蕴含温泉水成分，洁面时伴随而来是温泉水般的微温感；深入毛孔，能帮助溶解污垢，从而软化角质，并为肌肤持续补充水份。持续使用，肌肤变得水润、有弹性而不绷紧</a>
                         </div>
                         <!-- 产品价格 -->
                         <div class="sasa_rank_item_price">
@@ -186,14 +185,14 @@
 
                       <div class="sasa_rank_icon "></div>
                         <!--左边图片  -->
-                      <a class="goodstop_imgsmall" href="product-20255.html" target="_blank">
+                      <a class="goodstop_imgsmall" href="/html/goodsdetails.html?id=107135802001" target="_blank">
                         <img class="sasa_rank_item_img" alt="肌源赋活修护精华霜" src="images/mustcheck2.jpg" height="80" width="80">
                       </a>
                         <!-- 右边详情 -->
                       <div class="sasa_rank_item_info">
                         <!-- 产品名称 -->
                         <div class="sasa_rank_item_name">
-                          <a href="product-20255.html">SK-II&nbsp;R.N.A. POWER&nbsp;肌源赋活修护精华霜&nbsp;2.5克</a>
+                          <a href="/html/goodsdetails.html?id=107135802001">"净白矿物泥蕴磨沙微粒及维他命C，将多余及含色素的角质层推走，吸走黑头，达致肌肤焕白纯净</a>
                         </div>
                         <!-- 产品价格 -->
                         <div class="sasa_rank_item_price">
@@ -208,14 +207,14 @@
 
                       <div class="sasa_rank_icon "></div>
                         <!--左边图片  -->
-                      <a class="goodstop_imgsmall" href="product-20255.html" target="_blank">
+                      <a class="goodstop_imgsmall" href="/html/goodsdetails.html?id=108077102003" target="_blank">
                         <img class="sasa_rank_item_img" alt="肌源赋活修护精华霜" src="images/mustcheck2.jpg" height="80" width="80">
                       </a>
                         <!-- 右边详情 -->
                       <div class="sasa_rank_item_info">
                         <!-- 产品名称 -->
                         <div class="sasa_rank_item_name">
-                          <a href="product-20255.html">SK-II&nbsp;R.N.A. POWER&nbsp;肌源赋活修护精华霜&nbsp;2.5克</a>
+                          <a href="/html/goodsdetails.html?id=108077102003">"Shu Uemura (植村秀) BLANC:CHROMA 火山泥净白洁颜油有效温和代谢老废角质，带走积聚在肌肤的黑色素，焕发明亮剔透肌肤，</a>
                         </div>
                         <!-- 产品价格 -->
                         <div class="sasa_rank_item_price">
@@ -235,14 +234,14 @@
 
                       <div class="sasa_rank_icon "></div>
                         <!--左边图片  -->
-                      <a class="goodstop_imgsmall" href="product-20255.html" target="_blank">
+                      <a class="goodstop_imgsmall" href="/html//html/goodsdetails.html?id=108057602001" target="_blank">
                         <img class="sasa_rank_item_img" alt="肌源赋活修护精华霜" src="images/mustcheck2.jpg" height="80" width="80">
                       </a>
                         <!-- 右边详情 -->
                       <div class="sasa_rank_item_info">
                         <!-- 产品名称 -->
                         <div class="sasa_rank_item_name">
-                          <a href="product-20255.html">SK-II&nbsp;R.N.A. POWER&nbsp;肌源赋活修护精华霜&nbsp;2.5克</a>
+                          <a href="/html/goodsdetails.html?id=108057602001">"【Soo Beauté (素美) 喚膚魔法棒】 (1.5 毫升 x 5 支) </a>
                         </div>
                         <!-- 产品价格 -->
                         <div class="sasa_rank_item_price">
@@ -262,14 +261,14 @@
 
                       <div class="sasa_rank_icon "></div>
                         <!--左边图片  -->
-                      <a class="goodstop_imgsmall" href="product-20255.html" target="_blank">
+                      <a class="goodstop_imgsmall" href="/html/goodsdetails.html?id=108057602001" target="_blank">
                         <img class="sasa_rank_item_img" alt="肌源赋活修护精华霜" src="images/mustcheck2.jpg" height="80" width="80">
                       </a>
                         <!-- 右边详情 -->
                       <div class="sasa_rank_item_info">
                         <!-- 产品名称 -->
                         <div class="sasa_rank_item_name">
-                          <a href="product-20255.html">SK-II&nbsp;R.N.A. POWER&nbsp;肌源赋活修护精华霜&nbsp;2.5克</a>
+                          <a href="/html/goodsdetails.html?id=108057602001">SK-II&nbsp;R.N.A. POWER&nbsp;肌源赋活修护精华霜&nbsp;2.5克</a>
                         </div>
                         <!-- 产品价格 -->
                         <div class="sasa_rank_item_price">
@@ -284,7 +283,7 @@
            </ul>
         </div>
         <!-- 新品上市 -->
-        <div class="new_arrival main_li">
+        <div class="new_arrival main_li" id="#floor4">
           <div class="new_arrival_title title_img"> </div>
           <!-- 全部产品盒子 -->
            <ul class="new_arrival_cont">
